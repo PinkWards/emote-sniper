@@ -164,8 +164,7 @@ def main():
     
     # Combine new + existing
     all_emotes = new_emotes + existing_emotes
-    
-    # Create output in EXACT format like 7yd7
+
     output = {
         "keyword": None,
         "totalItems": len(all_emotes),

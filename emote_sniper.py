@@ -8,7 +8,6 @@ import re
 EMOTES_FILE = "EmoteSniper.json"
 
 def get_existing_emotes():
-    """Load existing emotes from JSON"""
     if os.path.exists(EMOTES_FILE):
         with open(EMOTES_FILE, 'r') as f:
             data = json.load(f)
@@ -16,11 +15,9 @@ def get_existing_emotes():
     return []
 
 def get_existing_ids(emotes):
-    """Get set of existing animation IDs"""
     return set(str(emote['id']) for emote in emotes)
 
 def fetch_emote_bundles(cursor=None):
-    """Fetch emote bundles from Roblox catalog"""
     url = "https://catalog.roblox.com/v1/search/items"
     
     params = {
@@ -47,7 +44,6 @@ def fetch_emote_bundles(cursor=None):
     return None
 
 def get_bundle_details(bundle_id):
-    """Get bundle details to find the emote asset ID"""
     url = f"https://catalog.roblox.com/v1/bundles/{bundle_id}/details"
     
     try:
@@ -71,8 +67,6 @@ def get_bundle_details(bundle_id):
     return None
 
 def get_animation_id_from_asset(asset_id):
-    """Get the actual Animation ID from the emote asset"""
-    
     try:
         url = f"https://assetdelivery.roblox.com/v1/asset/?id={asset_id}"
         response = requests.get(url, headers={
@@ -96,12 +90,11 @@ def get_animation_id_from_asset(asset_id):
 
 def main():
     print("=" * 50)
-    print(f"EMOTE SNIPER - {datetime.now()}")
+    print(f"PINKWARDS EMOTE SNIPER - {datetime.now()}")
     print("=" * 50)
     
     existing_emotes = get_existing_emotes()
     existing_animation_ids = get_existing_ids(existing_emotes)
-    
     existing_bundle_ids = set()
     
     print(f"Existing emotes: {len(existing_emotes)}")
@@ -162,9 +155,9 @@ def main():
     print("")
     print("=" * 50)
     
-    # Combine new + existing
     all_emotes = new_emotes + existing_emotes
-
+    
+    
     output = {
         "keyword": None,
         "totalItems": len(all_emotes),

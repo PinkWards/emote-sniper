@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 * * * *'
   
+  # Also run at specific times for thorough scans
+  # - cron: '0 */6 * * *'  # Every 6 hours (optional deeper scan)
+  
   # Allow manual trigger
   workflow_dispatch:
 
@@ -14,6 +17,7 @@ permissions:
 jobs:
   snipe:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Max 30 minutes runtime
     
     steps:
       - name: 🎀 Checkout Repository
@@ -25,15 +29,25 @@ jobs:
           python-version: '3.11'
       
       - name: 📦 Install Dependencies
-        run: pip install requests
+        run: |
+          pip install --upgrade pip
+          pip install requests
       
       - name: 🔍 Run Emote Sniper
         run: python emote_sniper.py
+        env:
+          PYTHONUNBUFFERED: "1"
       
       - name: 💾 Commit & Push Changes
         run: |
           git config user.name "PinkWards Bot"
           git config user.email "actions@github.com"
           git add EmoteSniper.json
-          git diff --staged --quiet || git commit -m "🎀 Auto-update emotes | $(date +'%Y-%m-%d %H:%M UTC')"
-          git push
+          
+          # Check if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🎀 Auto-update emotes | $(date +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

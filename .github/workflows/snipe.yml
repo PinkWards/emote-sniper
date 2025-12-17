@@ -5,9 +5,6 @@ on:
   schedule:
     - cron: '0 * * * *'
   
-  # Also run at specific times for thorough scans
-  # - cron: '0 */6 * * *'  # Every 6 hours (optional deeper scan)
-  
   # Allow manual trigger
   workflow_dispatch:
 
@@ -17,7 +14,7 @@ permissions:
 jobs:
   snipe:
     runs-on: ubuntu-latest
-    timeout-minutes: 30  # Max 30 minutes runtime
+    timeout-minutes: 45  # Extended timeout for more endpoints
     
     steps:
       - name: 🎀 Checkout Repository
@@ -44,10 +41,12 @@ jobs:
           git config user.email "actions@github.com"
           git add EmoteSniper.json
           
-          # Check if there are changes
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "✓ No changes to commit"
           else
-            git commit -m "🎀 Auto-update emotes | $(date +'%Y-%m-%d %H:%M UTC')"
+            EMOTE_COUNT=$(python -c "import json; print(json.load(open('EmoteSniper.json'))['totalItems'])")
+            NEW_COUNT=$(git diff --staged EmoteSniper.json | grep -c '"id":' || echo "0")
+            git commit -m "🎀 Update emotes | Total: $EMOTE_COUNT | $(date +'%Y-%m-%d %H:%M UTC')"
             git push
+            echo "✓ Pushed changes!"
           fi

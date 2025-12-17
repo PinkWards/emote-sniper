@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 import time
 import re
 
@@ -59,7 +59,6 @@ def get_bundle_details(bundle_id):
             data = response.json()
             bundle_name = data.get('name', '')
             
-            # Find the emote asset in the bundle
             for item in data.get('items', []):
                 if item.get('type') == 'Asset':
                     return {
@@ -72,12 +71,8 @@ def get_bundle_details(bundle_id):
     return None
 
 def get_animation_id_from_asset(asset_id):
-    """
-    Get the actual Animation ID from the emote asset.
-    This is the ID that works with HumanoidDescription:SetEmotes()
-    """
+    """Get the actual Animation ID from the emote asset"""
     
-    # Method 1: Try to get from asset delivery
     try:
         url = f"https://assetdelivery.roblox.com/v1/asset/?id={asset_id}"
         response = requests.get(url, headers={
@@ -87,41 +82,16 @@ def get_animation_id_from_asset(asset_id):
         if response.status_code == 200:
             content = response.text
             
-            # Look for animation ID in the content
-            # Pattern: <url>http://www.roblox.com/asset/?id=XXXXXXXXXX</url>
             match = re.search(r'<url>[^<]*id=(\d+)[^<]*</url>', content)
             if match:
-                animation_id = match.group(1)
-                print(f"    Found animation ID: {animation_id}")
-                return animation_id
+                return match.group(1)
             
-            # Alternative pattern: rbxassetid://XXXXXXXXXX
             match = re.search(r'rbxassetid://(\d+)', content)
             if match:
-                animation_id = match.group(1)
-                print(f"    Found animation ID (alt): {animation_id}")
-                return animation_id
-    except Exception as e:
-        print(f"    Method 1 failed: {e}")
+                return match.group(1)
+    except:
+        pass
     
-    # Method 2: Try product info API
-    try:
-        url = f"https://economy.roblox.com/v2/assets/{asset_id}/details"
-        response = requests.get(url, headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        }, timeout=10)
-        
-        if response.status_code == 200:
-            data = response.json()
-            # Sometimes the asset ID itself is the animation ID
-            if data.get('AssetTypeId') == 61:  # 61 = Emote
-                print(f"    Using asset ID as animation ID: {asset_id}")
-                return str(asset_id)
-    except Exception as e:
-        print(f"    Method 2 failed: {e}")
-    
-    # Fallback: return the asset ID
-    print(f"    Fallback to asset ID: {asset_id}")
     return str(asset_id)
 
 def main():
@@ -129,23 +99,17 @@ def main():
     print(f"EMOTE SNIPER - {datetime.now()}")
     print("=" * 50)
     
-    # Load existing emotes
     existing_emotes = get_existing_emotes()
     existing_animation_ids = get_existing_ids(existing_emotes)
     
-    # Also track bundle IDs we've already processed
     existing_bundle_ids = set()
-    for emote in existing_emotes:
-        if 'bundleId' in emote:
-            existing_bundle_ids.add(str(emote['bundleId']))
     
     print(f"Existing emotes: {len(existing_emotes)}")
-    print(f"Existing animation IDs: {len(existing_animation_ids)}")
     print("")
     
     new_emotes = []
     cursor = None
-    pages_to_scan = 10
+    pages_to_scan = 15
     
     for page in range(pages_to_scan):
         print(f"[Page {page + 1}/{pages_to_scan}] Scanning catalog...")
@@ -161,14 +125,11 @@ def main():
         
         for item in items:
             item_id = str(item.get('id', ''))
-            item_type = item.get('itemType', '')
             
-            # Skip if we already have this bundle
             if item_id in existing_bundle_ids:
                 continue
             
-            # Get bundle details
-            print(f"  Checking: {item.get('name', 'Unknown')} (ID: {item_id})")
+            existing_bundle_ids.add(item_id)
             
             bundle_info = get_bundle_details(item_id)
             
@@ -176,10 +137,8 @@ def main():
                 asset_id = bundle_info['assetId']
                 emote_name = bundle_info['name']
                 
-                # Get the actual animation ID
                 animation_id = get_animation_id_from_asset(asset_id)
                 
-                # Check if we already have this animation ID
                 if animation_id not in existing_animation_ids:
                     new_emote = {
                         "id": int(animation_id),
@@ -188,63 +147,43 @@ def main():
                     
                     new_emotes.append(new_emote)
                     existing_animation_ids.add(animation_id)
-                    existing_bundle_ids.add(item_id)
                     
-                    print(f"    ✓ NEW EMOTE: {emote_name}")
-                    print(f"      Animation ID: {animation_id}")
-                else:
-                    print(f"    - Already exists")
+                    print(f"    ✓ NEW: {emote_name} (ID: {animation_id})")
             
-            # Rate limiting
-            time.sleep(0.3)
+            time.sleep(0.2)
         
-        # Check for next page
         cursor = result.get('nextPageCursor')
         if not cursor:
             print("  No more pages.")
             break
         
-        time.sleep(0.5)
+        time.sleep(0.3)
     
     print("")
     print("=" * 50)
     
+    # Combine new + existing
+    all_emotes = new_emotes + existing_emotes
+    
+    # Create output in EXACT format like 7yd7
+    output = {
+        "keyword": None,
+        "totalItems": len(all_emotes),
+        "lastUpdate": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.") + f"{datetime.now().microsecond // 1000:03d}Z",
+        "data": all_emotes
+    }
+    
+    with open(EMOTES_FILE, 'w') as f:
+        json.dump(output, f, indent=2)
+    
     if new_emotes:
         print(f"FOUND {len(new_emotes)} NEW EMOTES!")
-        print("")
-        
         for emote in new_emotes:
             print(f"  • {emote['name']} (ID: {emote['id']})")
-        
-        # Add new emotes to the beginning of the list
-        all_emotes = new_emotes + existing_emotes
-        
-        # Save to file
-        output = {
-            "lastUpdated": datetime.now().isoformat(),
-            "totalEmotes": len(all_emotes),
-            "data": all_emotes
-        }
-        
-        with open(EMOTES_FILE, 'w') as f:
-            json.dump(output, f, indent=2)
-        
-        print("")
-        print(f"Saved! Total emotes: {len(all_emotes)}")
     else:
         print("No new emotes found.")
-        
-        # Still update the lastUpdated timestamp
-        if existing_emotes:
-            output = {
-                "lastUpdated": datetime.now().isoformat(),
-                "totalEmotes": len(existing_emotes),
-                "data": existing_emotes
-            }
-            
-            with open(EMOTES_FILE, 'w') as f:
-                json.dump(output, f, indent=2)
     
+    print(f"Total emotes saved: {len(all_emotes)}")
     print("=" * 50)
 
 if __name__ == "__main__":

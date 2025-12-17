@@ -1,9 +1,11 @@
 name: PinkWards Emote Sniper
 
 on:
+  # Run every hour
   schedule:
     - cron: '0 * * * *'
   
+  # Allow manual trigger
   workflow_dispatch:
 
 permissions:
@@ -14,24 +16,24 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
+      - name: 🎀 Checkout Repository
         uses: actions/checkout@v4
       
-      - name: Setup Python
+      - name: 🐍 Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
       
-      - name: Install requests
+      - name: 📦 Install Dependencies
         run: pip install requests
       
-      - name: Run sniper
+      - name: 🔍 Run Emote Sniper
         run: python emote_sniper.py
       
-      - name: Commit changes
+      - name: 💾 Commit & Push Changes
         run: |
-          git config user.name "GitHub Actions"
+          git config user.name "PinkWards Bot"
           git config user.email "actions@github.com"
           git add EmoteSniper.json
-          git diff --staged --quiet || git commit -m "🎀 Update emotes - $(date +'%Y-%m-%d %H:%M')"
+          git diff --staged --quiet || git commit -m "🎀 Auto-update emotes | $(date +'%Y-%m-%d %H:%M UTC')"
           git push

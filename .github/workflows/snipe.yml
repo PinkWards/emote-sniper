@@ -1,11 +1,9 @@
-name: Emote Sniper
+name: PinkWards Emote Sniper
 
 on:
-  # Run every hour
   schedule:
     - cron: '0 * * * *'
   
-  # Allow manual run
   workflow_dispatch:
 
 permissions:
@@ -35,5 +33,5 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add EmoteSniper.json
-          git diff --staged --quiet || git commit -m "🎭 Update emotes - $(date +'%Y-%m-%d %H:%M')"
+          git diff --staged --quiet || git commit -m "🎀 Update emotes - $(date +'%Y-%m-%d %H:%M')"
           git push

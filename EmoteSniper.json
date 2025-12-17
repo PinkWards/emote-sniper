@@ -1,1 +1,47 @@
-
+{
+  "keyword": null,
+  "totalItems": 10,
+  "lastUpdate": "2024-01-01T00:00:00.000Z",
+  "data": [
+    {
+      "id": 3360689775,
+      "name": "Salute"
+    },
+    {
+      "id": 5915779043,
+      "name": "Applaud"
+    },
+    {
+      "id": 3360686498,
+      "name": "Stadium"
+    },
+    {
+      "id": 3360692915,
+      "name": "Tilt"
+    },
+    {
+      "id": 3576968026,
+      "name": "Shrug"
+    },
+    {
+      "id": 3337994105,
+      "name": "Point"
+    },
+    {
+      "id": 3337999268,
+      "name": "Disagree"
+    },
+    {
+      "id": 3338000990,
+      "name": "Agree"
+    },
+    {
+      "id": 3823158750,
+      "name": "Getting Hyped"
+    },
+    {
+      "id": 3823161679,
+      "name": "Lasso Dance"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 28287,
-  "lastUpdate": "2025-12-26T10:13:15.849Z",
+  "totalItems": 28288,
+  "lastUpdate": "2025-12-26T11:11:24.086Z",
   "data": [
     {
       "id": 3360689775,
@@ -113150,6 +113150,10 @@
     {
       "id": 91802181049833,
       "name": "[R6] JUMPSTYLE"
+    },
+    {
+      "id": 77941836432515,
+      "name": "Stranger Things Vecna Twist"
     }
   ]
 }

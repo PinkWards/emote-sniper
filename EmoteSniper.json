@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 28337,
-  "lastUpdate": "2025-12-26T19:09:31.282Z",
+  "totalItems": 28339,
+  "lastUpdate": "2025-12-26T20:12:52.682Z",
   "data": [
     {
       "id": 3360689775,
@@ -113350,6 +113350,14 @@
     {
       "id": 117319123981089,
       "name": "Needy Stretch"
+    },
+    {
+      "id": 114153487011338,
+      "name": "/e headless and no leg troll emote"
+    },
+    {
+      "id": 118393844020001,
+      "name": "/e headless and no leg troll emote"
     }
   ]
 }

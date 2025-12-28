@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 28573,
-  "lastUpdate": "2025-12-28T09:12:07.607Z",
+  "totalItems": 28574,
+  "lastUpdate": "2025-12-28T10:12:02.310Z",
   "data": [
     {
       "id": 3360689775,
@@ -114294,6 +114294,10 @@
     {
       "id": 87023371311138,
       "name": "Just Stretch"
+    },
+    {
+      "id": 109633667140535,
+      "name": "Temper Tantrum [ TOXIC EMOTE ]"
     }
   ]
 }

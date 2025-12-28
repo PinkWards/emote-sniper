@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 28583,
-  "lastUpdate": "2025-12-28T15:10:58.910Z",
+  "totalItems": 28586,
+  "lastUpdate": "2025-12-28T16:13:38.503Z",
   "data": [
     {
       "id": 3360689775,
@@ -114334,6 +114334,18 @@
     {
       "id": 114313452284155,
       "name": "Im not cute anymore - trendy dance"
+    },
+    {
+      "id": 78070181185502,
+      "name": "Strategy"
+    },
+    {
+      "id": 97611382500411,
+      "name": "LIGHTSPEED HOOK"
+    },
+    {
+      "id": 116649814297657,
+      "name": "67 Emote [OG]"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 29705,
-  "lastUpdate": "2026-01-06T08:18:05.080Z",
+  "totalItems": 29714,
+  "lastUpdate": "2026-01-06T09:18:03.770Z",
   "data": [
     {
       "id": 3360689775,
@@ -118808,6 +118808,42 @@
     {
       "id": 135935306207274,
       "name": "Blaze"
+    },
+    {
+      "id": 82059514228008,
+      "name": "Aura Emote Levitating"
+    },
+    {
+      "id": 130791749439397,
+      "name": "Silly Float"
+    },
+    {
+      "id": 92553799277288,
+      "name": "Cute Sit"
+    },
+    {
+      "id": 131383190957979,
+      "name": "Cute Sit Idle"
+    },
+    {
+      "id": 124816177560975,
+      "name": "Float"
+    },
+    {
+      "id": 98193487057348,
+      "name": "sit"
+    },
+    {
+      "id": 93403651970150,
+      "name": "♡ ꒰ Took her to the O King Von Dance OG"
+    },
+    {
+      "id": 89924604676248,
+      "name": "♡ ꒰ POI POI Dance OG"
+    },
+    {
+      "id": 113113631334973,
+      "name": "Get Griddy Emote"
     }
   ]
 }

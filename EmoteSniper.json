@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 30053,
-  "lastUpdate": "2026-01-08T19:12:48.811Z",
+  "totalItems": 30058,
+  "lastUpdate": "2026-01-08T20:13:47.453Z",
   "data": [
     {
       "id": 3360689775,
@@ -120200,6 +120200,26 @@
     {
       "id": 136517840877770,
       "name": "Sitting after a soccer Game"
+    },
+    {
+      "id": 88414026990472,
+      "name": "Fling emote"
+    },
+    {
+      "id": 85788129274230,
+      "name": "Aura Flex"
+    },
+    {
+      "id": 107885668274007,
+      "name": "⛄ Snow Lay"
+    },
+    {
+      "id": 136609531863354,
+      "name": "Powerful Aura Farming"
+    },
+    {
+      "id": 95867809775448,
+      "name": "Unbothered Aura Idle"
     }
   ]
 }

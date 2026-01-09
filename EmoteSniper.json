@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 30194,
-  "lastUpdate": "2026-01-09T22:12:35.689Z",
+  "totalItems": 30195,
+  "lastUpdate": "2026-01-09T23:12:21.159Z",
   "data": [
     {
       "id": 3360689775,
@@ -120764,6 +120764,10 @@
     {
       "id": 125106092377031,
       "name": "[⏳LIMITED] Caramelldansen Kawaii Dance"
+    },
+    {
+      "id": 88318250668110,
+      "name": "Floating Aura Pose"
     }
   ]
 }

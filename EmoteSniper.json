@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 30461,
-  "lastUpdate": "2026-01-11T15:11:21.914Z",
+  "totalItems": 30463,
+  "lastUpdate": "2026-01-11T16:13:35.053Z",
   "data": [
     {
       "id": 3360689775,
@@ -121832,6 +121832,14 @@
     {
       "id": 111902633459877,
       "name": "Chinese dance"
+    },
+    {
+      "id": 71306199618274,
+      "name": "♡ Cute idle"
+    },
+    {
+      "id": 114133856366543,
+      "name": "Rakai Dance Emote"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 30509,
-  "lastUpdate": "2026-01-11T22:11:48.036Z",
+  "totalItems": 30515,
+  "lastUpdate": "2026-01-11T23:11:48.478Z",
   "data": [
     {
       "id": 3360689775,
@@ -122024,6 +122024,30 @@
     {
       "id": 122125773874273,
       "name": "[BEST] French Confidence Emote"
+    },
+    {
+      "id": 96802819028203,
+      "name": "Golden Freddy Idle"
+    },
+    {
+      "id": 133141794428766,
+      "name": "No Hands"
+    },
+    {
+      "id": 84894434854895,
+      "name": "Die Of Death Pursuer Pose [IDLE]"
+    },
+    {
+      "id": 97698507452762,
+      "name": "moe y2k vkei catwalk glam profile pose"
+    },
+    {
+      "id": 113587979498273,
+      "name": "cute sitting idle pose"
+    },
+    {
+      "id": 77611661629536,
+      "name": "Top Rack Dance"
     }
   ]
 }

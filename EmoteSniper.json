@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 30578,
-  "lastUpdate": "2026-01-12T10:16:56.963Z",
+  "totalItems": 30580,
+  "lastUpdate": "2026-01-12T11:12:59.965Z",
   "data": [
     {
       "id": 3360689775,
@@ -122300,6 +122300,14 @@
     {
       "id": 91531974927602,
       "name": "Body Dance"
+    },
+    {
+      "id": 128271713712015,
+      "name": "holding umbrella emote (PROFILE ANIMATION)"
+    },
+    {
+      "id": 79993328249068,
+      "name": "Sway Idle pose "
     }
   ]
 }

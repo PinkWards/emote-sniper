@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 30845,
-  "lastUpdate": "2026-01-14T09:20:29.817Z",
+  "totalItems": 30847,
+  "lastUpdate": "2026-01-14T10:15:25.131Z",
   "data": [
     {
       "id": 3360689775,
@@ -123368,6 +123368,14 @@
     {
       "id": 81173748694088,
       "name": "Siamese Struggle"
+    },
+    {
+      "id": 74056383974887,
+      "name": "Capoeira Stance (Elena)"
+    },
+    {
+      "id": 116751899431560,
+      "name": "Fighting Stance (Kyo)"
     }
   ]
 }

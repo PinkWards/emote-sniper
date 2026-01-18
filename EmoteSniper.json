@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 31410,
-  "lastUpdate": "2026-01-18T21:11:01.462Z",
+  "totalItems": 31416,
+  "lastUpdate": "2026-01-18T22:11:28.828Z",
   "data": [
     {
       "id": 3360689775,
@@ -125628,6 +125628,30 @@
     {
       "id": 124217498263841,
       "name": "Oh Who Is You? Goofy Trend"
+    },
+    {
+      "id": 71710473104367,
+      "name": "Sturdy Chronic Float "
+    },
+    {
+      "id": 137900478187826,
+      "name": "Flex Bow"
+    },
+    {
+      "id": 138782122501292,
+      "name": "Aura Fly Idle [Right]"
+    },
+    {
+      "id": 139529977788672,
+      "name": "Aura Fly Idle [Left]"
+    },
+    {
+      "id": 90470105904836,
+      "name": "Aura Fly Idle"
+    },
+    {
+      "id": 72010679143147,
+      "name": "⏳[LIMITED] MM2 Sit"
     }
   ]
 }

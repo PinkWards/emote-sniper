@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 32186,
-  "lastUpdate": "2026-01-24T22:11:28.506Z",
+  "totalItems": 32189,
+  "lastUpdate": "2026-01-24T23:12:17.035Z",
   "data": [
     {
       "id": 3360689775,
@@ -128732,6 +128732,18 @@
     {
       "id": 74038266943488,
       "name": "Peacemaker Bounce [BEST]"
+    },
+    {
+      "id": 77305162565244,
+      "name": "Cute Sitting Emote"
+    },
+    {
+      "id": 96701371432290,
+      "name": "⏳[LIMITED] Caramelldansen (Caramell) Kawaii Dance"
+    },
+    {
+      "id": 139874184842917,
+      "name": "Stand Barrage [JOJO]"
     }
   ]
 }

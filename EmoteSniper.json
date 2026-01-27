@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 32502,
-  "lastUpdate": "2026-01-27T12:25:06.392Z",
+  "totalItems": 32506,
+  "lastUpdate": "2026-01-27T13:39:58.024Z",
   "data": [
     {
       "id": 3360689775,
@@ -129996,6 +129996,22 @@
     {
       "id": 102773324372973,
       "name": "Aura Booster"
+    },
+    {
+      "id": 80216915893578,
+      "name": "Relaxed Floating Pose"
+    },
+    {
+      "id": 104687168367706,
+      "name": " ⏳[LIMITED] Aura Float [Idle, AFK, Vibe, Chill]"
+    },
+    {
+      "id": 130721513377562,
+      "name": "67 Emote"
+    },
+    {
+      "id": 84756906630250,
+      "name": "JUMPSTYLE | FALL FROM THE SKY (OG)"
     }
   ]
 }

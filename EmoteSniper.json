@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 32498,
-  "lastUpdate": "2026-01-27T11:16:10.472Z",
+  "totalItems": 32502,
+  "lastUpdate": "2026-01-27T12:25:06.392Z",
   "data": [
     {
       "id": 3360689775,
@@ -129980,6 +129980,22 @@
     {
       "id": 87947545440022,
       "name": "Juri Mock Celebration"
+    },
+    {
+      "id": 117729029813544,
+      "name": "Furina"
+    },
+    {
+      "id": 82082905411988,
+      "name": "Sway it in a Circle"
+    },
+    {
+      "id": 96811700035339,
+      "name": "Peaceful Bounce [BEST]"
+    },
+    {
+      "id": 102773324372973,
+      "name": "Aura Booster"
     }
   ]
 }

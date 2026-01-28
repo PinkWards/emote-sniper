@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 32558,
-  "lastUpdate": "2026-01-28T00:56:18.944Z",
+  "totalItems": 32580,
+  "lastUpdate": "2026-01-28T02:58:44.837Z",
   "data": [
     {
       "id": 3360689775,
@@ -130220,6 +130220,94 @@
     {
       "id": 120325742812514,
       "name": "Confess Emote"
+    },
+    {
+      "id": 122119623803276,
+      "name": "Spicy Sassy Bouncy Dance "
+    },
+    {
+      "id": 73367673088763,
+      "name": "Bouncy Diva Jiggly Dance"
+    },
+    {
+      "id": 123881827126865,
+      "name": "Party Rocker"
+    },
+    {
+      "id": 130370224090628,
+      "name": "⚡ Raiden Punching Armstrong Loop"
+    },
+    {
+      "id": 130568953382104,
+      "name": "♡ cute kawaii floating "
+    },
+    {
+      "id": 137705345921183,
+      "name": "Cute shy pose"
+    },
+    {
+      "id": 132621697860996,
+      "name": "La anguila hip (MEME)"
+    },
+    {
+      "id": 134113797909796,
+      "name": "Naoya's Hair Flick [Jujutsu Kaisen]"
+    },
+    {
+      "id": 73687209744478,
+      "name": "Blue Top Rock"
+    },
+    {
+      "id": 79778968468514,
+      "name": "cute head hold pose"
+    },
+    {
+      "id": 127837049730074,
+      "name": "My Life is a Party!"
+    },
+    {
+      "id": 126721634418192,
+      "name": "Sem cabeça headless"
+    },
+    {
+      "id": 77668770610069,
+      "name": "Karatê Dance"
+    },
+    {
+      "id": 103019906532810,
+      "name": "Dodge the bullet"
+    },
+    {
+      "id": 109817600750565,
+      "name": "Lovely Day Stretch"
+    },
+    {
+      "id": 88879398552571,
+      "name": "The perfect aura fly pose idle"
+    },
+    {
+      "id": 92198706701963,
+      "name": "Bounce Hips"
+    },
+    {
+      "id": 89195141514249,
+      "name": "Need a Hip"
+    },
+    {
+      "id": 78387384142670,
+      "name": "Upside Down Dance"
+    },
+    {
+      "id": 104243486662701,
+      "name": "TF2 Pyro Laugh"
+    },
+    {
+      "id": 110463871023085,
+      "name": "nekopara cutesy idle!"
+    },
+    {
+      "id": 85302407498029,
+      "name": "MM2 Death Pose (Best One)"
     }
   ]
 }

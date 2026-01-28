@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 32635,
-  "lastUpdate": "2026-01-28T15:22:15.313Z",
+  "totalItems": 32636,
+  "lastUpdate": "2026-01-28T16:24:02.682Z",
   "data": [
     {
       "id": 3360689775,
@@ -130528,6 +130528,10 @@
     {
       "id": 105114026810456,
       "name": "Vibing Aura Idle"
+    },
+    {
+      "id": 96333275446767,
+      "name": "SpinneCopter"
     }
   ]
 }

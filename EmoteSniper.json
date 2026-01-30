@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 32798,
-  "lastUpdate": "2026-01-29T23:17:26.676Z",
+  "totalItems": 32801,
+  "lastUpdate": "2026-01-30T01:03:58.288Z",
   "data": [
     {
       "id": 3360689775,
@@ -131180,6 +131180,18 @@
     {
       "id": 74153246390105,
       "name": "♡ cute whimsical kicking feet floating emote "
+    },
+    {
+      "id": 126324247830300,
+      "name": "Jason Vorhees Emote"
+    },
+    {
+      "id": 101516485785953,
+      "name": "♡ cutesy girly kawaii shy stance"
+    },
+    {
+      "id": 140082978597799,
+      "name": "Slither"
     }
   ]
 }

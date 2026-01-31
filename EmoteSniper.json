@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 33020,
-  "lastUpdate": "2026-01-31T21:13:41.152Z",
+  "totalItems": 33026,
+  "lastUpdate": "2026-01-31T22:12:47.618Z",
   "data": [
     {
       "id": 3360689775,
@@ -132068,6 +132068,30 @@
     {
       "id": 118505017260563,
       "name": "swagino emote"
+    },
+    {
+      "id": 125900583305891,
+      "name": "🌻 Standing Shy & Cute"
+    },
+    {
+      "id": 83238697209412,
+      "name": "Needy Hips Bounce Dance"
+    },
+    {
+      "id": 94222275587696,
+      "name": "Offensive Idle"
+    },
+    {
+      "id": 117257115997878,
+      "name": "(⏳) ORIGINAL Top Rock"
+    },
+    {
+      "id": 70454788872481,
+      "name": "THROW IT IN A CIRCLE (NEW)"
+    },
+    {
+      "id": 130572937184242,
+      "name": "{Best} I Need A Dance"
     }
   ]
 }

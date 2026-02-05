@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 33713,
-  "lastUpdate": "2026-02-05T11:29:05.868Z",
+  "totalItems": 33718,
+  "lastUpdate": "2026-02-05T12:35:14.280Z",
   "data": [
     {
       "id": 3360689775,
@@ -134840,6 +134840,26 @@
     {
       "id": 71525576736486,
       "name": "Money Hop Dance 💸"
+    },
+    {
+      "id": 87241452908769,
+      "name": "Floating Ascension Emote"
+    },
+    {
+      "id": 86207473246627,
+      "name": "Spicy Jiggly Split Shake Dance"
+    },
+    {
+      "id": 89457403773678,
+      "name": "Spicy Jiggly Shake Dance"
+    },
+    {
+      "id": 122230041322037,
+      "name": "Spicy Jiggly Shake Dance"
+    },
+    {
+      "id": 139526521086137,
+      "name": "WHOOT, THERE IT IS"
     }
   ]
 }

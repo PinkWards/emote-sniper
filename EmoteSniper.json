@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 34098,
-  "lastUpdate": "2026-02-08T04:25:41.071Z",
+  "totalItems": 34101,
+  "lastUpdate": "2026-02-08T05:56:17.696Z",
   "data": [
     {
       "id": 3360689775,
@@ -136380,6 +136380,18 @@
     {
       "id": 130385526913082,
       "name": "cute bounce"
+    },
+    {
+      "id": 119052419833609,
+      "name": "The chosen one"
+    },
+    {
+      "id": 122590972572594,
+      "name": "adorable shy standing pose"
+    },
+    {
+      "id": 130092037274208,
+      "name": "Ice Cream Emote"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 34301,
-  "lastUpdate": "2026-02-09T20:32:41.631Z",
+  "totalItems": 34303,
+  "lastUpdate": "2026-02-09T21:30:09.019Z",
   "data": [
     {
       "id": 3360689775,
@@ -137192,6 +137192,14 @@
     {
       "id": 127428872287699,
       "name": "Peaceful Bounce!"
+    },
+    {
+      "id": 127842890757401,
+      "name": "✈️ Airplane Emote"
+    },
+    {
+      "id": 112512992263025,
+      "name": "Love me back [OG]"
     }
   ]
 }

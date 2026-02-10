@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 34395,
-  "lastUpdate": "2026-02-10T10:44:06.588Z",
+  "totalItems": 34401,
+  "lastUpdate": "2026-02-10T11:42:55.915Z",
   "data": [
     {
       "id": 3360689775,
@@ -137568,6 +137568,30 @@
     {
       "id": 74345989110500,
       "name": "Fingers Touching"
+    },
+    {
+      "id": 81431589106902,
+      "name": "Floating Waving Pose"
+    },
+    {
+      "id": 132426065434168,
+      "name": "୨ৎ Cute Shy Pose"
+    },
+    {
+      "id": 120769095541981,
+      "name": "Ketlin Dance"
+    },
+    {
+      "id": 114337986293965,
+      "name": "cutesy bubbly jump emote "
+    },
+    {
+      "id": 114013263055634,
+      "name": "Sunny Greeting"
+    },
+    {
+      "id": 84943781602856,
+      "name": "Floor Energy"
     }
   ]
 }

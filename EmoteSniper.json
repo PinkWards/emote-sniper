@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 34862,
-  "lastUpdate": "2026-02-13T16:32:54.116Z",
+  "totalItems": 34871,
+  "lastUpdate": "2026-02-13T17:34:38.765Z",
   "data": [
     {
       "id": 3360689775,
@@ -139436,6 +139436,42 @@
     {
       "id": 109573006355467,
       "name": "Suneo Dance"
+    },
+    {
+      "id": 118094755677660,
+      "name": "Matikanetannhauser Victory Spin [MAMBO]"
+    },
+    {
+      "id": 76020583122931,
+      "name": "Funny Jason Dance"
+    },
+    {
+      "id": 71090197352961,
+      "name": "SHAKE THAT THANG"
+    },
+    {
+      "id": 129385687986483,
+      "name": "Choso"
+    },
+    {
+      "id": 120688994137810,
+      "name": "Flying Relaxing Pose Emote"
+    },
+    {
+      "id": 75252828055686,
+      "name": "ILLIT \"Magnetic\""
+    },
+    {
+      "id": 137951296903772,
+      "name": "Olivia Dean \"Man I Need\""
+    },
+    {
+      "id": 118879275349080,
+      "name": "Choso Spin"
+    },
+    {
+      "id": 72285720345185,
+      "name": "Itchy Shake"
     }
   ]
 }

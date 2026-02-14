@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 34956,
-  "lastUpdate": "2026-02-14T04:00:57.016Z",
+  "totalItems": 34961,
+  "lastUpdate": "2026-02-14T05:10:01.608Z",
   "data": [
     {
       "id": 3360689775,
@@ -139812,6 +139812,26 @@
     {
       "id": 72796576830817,
       "name": "67 Emote"
+    },
+    {
+      "id": 99305245663921,
+      "name": "⏳[LIMITED] Headless Angelic Aura Floating"
+    },
+    {
+      "id": 113179861534161,
+      "name": "Douma Aura Sit [BEST]"
+    },
+    {
+      "id": 133997234829503,
+      "name": "Feeling so cute"
+    },
+    {
+      "id": 94193852132874,
+      "name": "Dangerous Duo A"
+    },
+    {
+      "id": 137559962275789,
+      "name": "Dangerous Duo B"
     }
   ]
 }

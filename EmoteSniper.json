@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 35093,
-  "lastUpdate": "2026-02-15T07:32:23.612Z",
+  "totalItems": 35095,
+  "lastUpdate": "2026-02-15T08:21:17.064Z",
   "data": [
     {
       "id": 3360689775,
@@ -140360,6 +140360,14 @@
     {
       "id": 73927186060846,
       "name": "An Impolite Gesture (Pose)"
+    },
+    {
+      "id": 103496383453300,
+      "name": "Light Right HRES Aura Pose"
+    },
+    {
+      "id": 118702807810538,
+      "name": "Dark Left HRES Aura Pose"
     }
   ]
 }

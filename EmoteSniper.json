@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 35298,
-  "lastUpdate": "2026-02-16T22:17:45.664Z",
+  "totalItems": 35300,
+  "lastUpdate": "2026-02-16T23:19:52.730Z",
   "data": [
     {
       "id": 3360689775,
@@ -141180,6 +141180,14 @@
     {
       "id": 129250358036368,
       "name": "Sleep floating afk aura idle "
+    },
+    {
+      "id": 91696712479135,
+      "name": "Yapping Tsundere"
+    },
+    {
+      "id": 105976077714697,
+      "name": "Aura Levitation Pose"
     }
   ]
 }

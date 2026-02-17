@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 35300,
-  "lastUpdate": "2026-02-17T04:09:15.588Z",
+  "totalItems": 35303,
+  "lastUpdate": "2026-02-17T05:52:20.289Z",
   "data": [
     {
       "id": 3360689775,
@@ -141188,6 +141188,18 @@
     {
       "id": 105976077714697,
       "name": "Aura Levitation Pose"
+    },
+    {
+      "id": 129614696948735,
+      "name": "Cortisol Dance v2"
+    },
+    {
+      "id": 129879857204823,
+      "name": "Cute Heart Emote"
+    },
+    {
+      "id": 102370067371893,
+      "name": "Kawaii Profile Pose"
     }
   ]
 }

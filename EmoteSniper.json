@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 35531,
-  "lastUpdate": "2026-02-18T17:47:07.046Z",
+  "totalItems": 35536,
+  "lastUpdate": "2026-02-18T18:38:09.366Z",
   "data": [
     {
       "id": 3360689775,
@@ -142112,6 +142112,26 @@
     {
       "id": 129766782506938,
       "name": "[GLITCH] Aura Floating"
+    },
+    {
+      "id": 116090470406589,
+      "name": "Sit Floating Aura Emote"
+    },
+    {
+      "id": 83871322497615,
+      "name": "yes"
+    },
+    {
+      "id": 82893256998162,
+      "name": "SHAKE THAT THANG (OG)"
+    },
+    {
+      "id": 94609252764753,
+      "name": "( ⭐ ) Hype Boy - NewJeans"
+    },
+    {
+      "id": 90588448587538,
+      "name": "Stretch"
     }
   ]
 }

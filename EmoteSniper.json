@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 35648,
-  "lastUpdate": "2026-02-19T07:42:54.038Z",
+  "totalItems": 35653,
+  "lastUpdate": "2026-02-19T08:31:40.041Z",
   "data": [
     {
       "id": 3360689775,
@@ -142580,6 +142580,26 @@
     {
       "id": 103052385486721,
       "name": "⭐ Sit Animate"
+    },
+    {
+      "id": 121207824837510,
+      "name": "Ledge Sit / Sitting Pose"
+    },
+    {
+      "id": 134451585861009,
+      "name": "YIPPEE Silly Jumping"
+    },
+    {
+      "id": 107433600203738,
+      "name": "SHAKE THE REBOLATION"
+    },
+    {
+      "id": 119557260760667,
+      "name": "Hips Sway [MEME]"
+    },
+    {
+      "id": 85809736302183,
+      "name": "Sonic Adventure Profile idle emote"
     }
   ]
 }

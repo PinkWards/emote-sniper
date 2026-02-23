@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 36216,
-  "lastUpdate": "2026-02-23T14:51:20.590Z",
+  "totalItems": 36223,
+  "lastUpdate": "2026-02-23T15:37:49.049Z",
   "data": [
     {
       "id": 3360689775,
@@ -144852,6 +144852,34 @@
     {
       "id": 119053349605206,
       "name": "You're in trouble Crossed arms foot stomp Emote"
+    },
+    {
+      "id": 131157532927432,
+      "name": "Floating Chill Pose Emote"
+    },
+    {
+      "id": 115683366764779,
+      "name": "Cute Kawaii Sit Emote 🍓"
+    },
+    {
+      "id": 88060189472373,
+      "name": "Relaxed Vibe Sit"
+    },
+    {
+      "id": 78253405539185,
+      "name": "No hands (Shake)"
+    },
+    {
+      "id": 95801181414110,
+      "name": "MJ - P.Y.T. Pretty Young Thing Dance"
+    },
+    {
+      "id": 117058672425674,
+      "name": "Blue Top Rock [BEST]"
+    },
+    {
+      "id": 109447550413572,
+      "name": "Hip Sway"
     }
   ]
 }

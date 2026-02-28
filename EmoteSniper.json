@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 36847,
-  "lastUpdate": "2026-02-28T13:31:21.611Z",
+  "totalItems": 36853,
+  "lastUpdate": "2026-02-28T14:14:00.214Z",
   "data": [
     {
       "id": 3360689775,
@@ -147376,6 +147376,30 @@
     {
       "id": 126215188648147,
       "name": "hoppin dip dip dip emote"
+    },
+    {
+      "id": 117987174605410,
+      "name": "The Manderville"
+    },
+    {
+      "id": 108985707207747,
+      "name": "Cat Run (Idle, not moving)"
+    },
+    {
+      "id": 136982788918345,
+      "name": "[Best] Mini Spider Jumping"
+    },
+    {
+      "id": 131809639353612,
+      "name": "[BEST] Godly Aura Floating"
+    },
+    {
+      "id": 104437561158926,
+      "name": "[⌛Limited] Low Cortisol"
+    },
+    {
+      "id": 86477712260139,
+      "name": "Cute Sit Sway"
     }
   ]
 }

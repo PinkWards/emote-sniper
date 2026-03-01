@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 36914,
-  "lastUpdate": "2026-02-28T23:13:28.464Z",
+  "totalItems": 36928,
+  "lastUpdate": "2026-03-01T01:13:35.105Z",
   "data": [
     {
       "id": 3360689775,
@@ -147644,6 +147644,62 @@
     {
       "id": 111814645640707,
       "name": "Hot Walk (Red Carpet)"
+    },
+    {
+      "id": 119030330475501,
+      "name": "Naruto Emote"
+    },
+    {
+      "id": 92480401483568,
+      "name": "Floating Front Flip (OG)"
+    },
+    {
+      "id": 120147155355032,
+      "name": "Takaba"
+    },
+    {
+      "id": 133383694923377,
+      "name": "Baddie Dance"
+    },
+    {
+      "id": 110172986000101,
+      "name": "Pet Them (Matching Emote)"
+    },
+    {
+      "id": 118102404327042,
+      "name": "Be A Pet (Matching Emote)"
+    },
+    {
+      "id": 84497503833313,
+      "name": "Animation"
+    },
+    {
+      "id": 136693228858074,
+      "name": "💩 HUGE POOP 😂 [AURA]"
+    },
+    {
+      "id": 131628080433999,
+      "name": "Cute Silly Bouncy Hip Sway Needy Shake 🍧"
+    },
+    {
+      "id": 71542621256569,
+      "name": "look at me Kawaii fit check"
+    },
+    {
+      "id": 110291590641334,
+      "name": "Kawai Emote (Caramelldance)"
+    },
+    {
+      "id": 125766380180913,
+      "name": "Godly Aura"
+    },
+    {
+      "id": 103033072657584,
+      "name": "(Leaning Backward) Shake That Thang"
+    },
+    {
+      "id": 80551781420352,
+      "name": "Upright Seated Yoga Pose"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 39306,
-  "lastUpdate": "2026-03-18T23:22:20.916Z",
+  "totalItems": 39313,
+  "lastUpdate": "2026-03-19T01:10:41.638Z",
   "data": [
     {
       "id": 3360689775,
@@ -157212,6 +157212,34 @@
     {
       "id": 91780847144628,
       "name": "Funk Brazillian Footsteps"
+    },
+    {
+      "id": 128543500403577,
+      "name": "Yuji Jump Trend Emote"
+    },
+    {
+      "id": 84341238172358,
+      "name": "ReDreaming Angel"
+    },
+    {
+      "id": 139350774023354,
+      "name": "Yuji jumping emote"
+    },
+    {
+      "id": 98956599082170,
+      "name": "HEAD BEHIND BACK [headless]"
+    },
+    {
+      "id": 134765610300405,
+      "name": "Front Flip?"
+    },
+    {
+      "id": 126448894290552,
+      "name": "Cute Pose Blushing/Shy [Idle]"
+    },
+    {
+      "id": 116210363434394,
+      "name": "cute dancy dance"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 40301,
-  "lastUpdate": "2026-03-27T09:44:03.473Z",
+  "totalItems": 40304,
+  "lastUpdate": "2026-03-27T10:38:06.332Z",
   "data": [
     {
       "id": 3360689775,
@@ -161192,6 +161192,18 @@
     {
       "id": 114210071309720,
       "name": "H&RBlockEmote"
+    },
+    {
+      "id": 114329756154944,
+      "name": "☆ | Laying rizz floating emote"
+    },
+    {
+      "id": 95230085464304,
+      "name": "TAKA LA DENTRO DANCE [OG] - shonci "
+    },
+    {
+      "id": 128073224680682,
+      "name": "Yuji Jump"
     }
   ]
 }

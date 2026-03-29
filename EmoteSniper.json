@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 40600,
-  "lastUpdate": "2026-03-29T17:22:58.743Z",
+  "totalItems": 40607,
+  "lastUpdate": "2026-03-29T18:26:44.739Z",
   "data": [
     {
       "id": 3360689775,
@@ -162388,6 +162388,34 @@
     {
       "id": 92368121552189,
       "name": "Floating Head Sit"
+    },
+    {
+      "id": 125214686528089,
+      "name": "Hip Groove"
+    },
+    {
+      "id": 82403043835517,
+      "name": "Cute Bouncy Groove"
+    },
+    {
+      "id": 110614921871084,
+      "name": "Snoop's Walk Emote"
+    },
+    {
+      "id": 136969202917136,
+      "name": "Griddy"
+    },
+    {
+      "id": 130373195204051,
+      "name": "🕷️Jumping Spider Emote"
+    },
+    {
+      "id": 86909155823918,
+      "name": "I see kaream [Ice Cream]"
+    },
+    {
+      "id": 93294025174703,
+      "name": "Needy Hip Circle Shake/Stretch"
     }
   ]
 }

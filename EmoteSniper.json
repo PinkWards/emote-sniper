@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 42266,
-  "lastUpdate": "2026-04-10T04:37:54.646Z",
+  "totalItems": 42274,
+  "lastUpdate": "2026-04-10T06:26:39.329Z",
   "data": [
     {
       "id": 3360689775,
@@ -169052,6 +169052,38 @@
     {
       "id": 136840879082060,
       "name": "Needy Bouncy Circle Shake Dance"
+    },
+    {
+      "id": 80396482114496,
+      "name": "WOOF WOOF! BARK BARK!"
+    },
+    {
+      "id": 97808129883336,
+      "name": "KATSEYE - PINKY UP (at the parkin lot)"
+    },
+    {
+      "id": 114935472703447,
+      "name": "PINKY UP - Intro"
+    },
+    {
+      "id": 71958337177167,
+      "name": "Chinese Dance"
+    },
+    {
+      "id": 99380869000691,
+      "name": "Eat it up"
+    },
+    {
+      "id": 72657144424151,
+      "name": "Can you believe this guy?"
+    },
+    {
+      "id": 86699933904477,
+      "name": "RNG Light Aura"
+    },
+    {
+      "id": 138611730848822,
+      "name": "♡ : cutesy tilting towards side idle"
     }
   ]
 }

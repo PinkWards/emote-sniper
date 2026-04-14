@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 42943,
-  "lastUpdate": "2026-04-14T21:42:02.748Z",
+  "totalItems": 42945,
+  "lastUpdate": "2026-04-14T22:36:36.614Z",
   "data": [
     {
       "id": 3360689775,
@@ -171760,6 +171760,14 @@
     {
       "id": 118512538899262,
       "name": "⏳[LIMITED] Headless Nonchalant Aura Float"
+    },
+    {
+      "id": 134917631097617,
+      "name": "Sturdy Blue Shirt Kid"
+    },
+    {
+      "id": 74383399185109,
+      "name": "Sturdy Blue Shirt Kid"
     }
   ]
 }

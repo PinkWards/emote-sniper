@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 42870,
-  "lastUpdate": "2026-04-14T06:25:50.460Z",
+  "totalItems": 42881,
+  "lastUpdate": "2026-04-14T08:20:44.779Z",
   "data": [
     {
       "id": 3360689775,
@@ -171468,6 +171468,50 @@
     {
       "id": 123890109831022,
       "name": "Head Pat / Head Scratch Emote"
+    },
+    {
+      "id": 140027259817934,
+      "name": "Blue Shirt Sturdy"
+    },
+    {
+      "id": 100966931518664,
+      "name": "｡♡ : cute doll sitting idle pose"
+    },
+    {
+      "id": 136487102049552,
+      "name": "Bouncing Hula Dance"
+    },
+    {
+      "id": 140003397216574,
+      "name": "Sturdy Blue Shirt Kid"
+    },
+    {
+      "id": 107683179962547,
+      "name": "[2 PLAYER EMOTE] Headpats 2"
+    },
+    {
+      "id": 88959179458252,
+      "name": "[2 PLAYER EMOTE] Headpats 1"
+    },
+    {
+      "id": 83538844608428,
+      "name": "Jamal Dance"
+    },
+    {
+      "id": 77180740212871,
+      "name": "Raid Punching Loop by Armstrong"
+    },
+    {
+      "id": 115570129718202,
+      "name": "Speed Mirage [Speed Aura]"
+    },
+    {
+      "id": 79801883513771,
+      "name": "Absolute Cinema Floating"
+    },
+    {
+      "id": 86641108749594,
+      "name": "Dahood Wall Lean"
     }
   ]
 }

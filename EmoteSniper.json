@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 43284,
-  "lastUpdate": "2026-04-17T12:54:02.954Z",
+  "totalItems": 43286,
+  "lastUpdate": "2026-04-17T14:16:26.291Z",
   "data": [
     {
       "id": 3360689775,
@@ -173124,6 +173124,14 @@
     {
       "id": 87035650268135,
       "name": "PFP Holder [READ DESC]"
+    },
+    {
+      "id": 71293596243617,
+      "name": "Laufey \"Tough Luck\""
+    },
+    {
+      "id": 104139364117528,
+      "name": "King Nasir 🔥"
     }
   ]
 }

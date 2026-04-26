@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 44265,
-  "lastUpdate": "2026-04-26T10:36:24.367Z",
+  "totalItems": 44266,
+  "lastUpdate": "2026-04-26T11:32:18.318Z",
   "data": [
     {
       "id": 3360689775,
@@ -177048,6 +177048,10 @@
     {
       "id": 78644247477361,
       "name": "Conquest's Second Arrival Pose (Invincible)"
+    },
+    {
+      "id": 122750506536406,
+      "name": "Peach Bomb"
     }
   ]
 }

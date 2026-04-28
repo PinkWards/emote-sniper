@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 44499,
-  "lastUpdate": "2026-04-28T19:17:55.313Z",
+  "totalItems": 44507,
+  "lastUpdate": "2026-04-28T20:58:23.680Z",
   "data": [
     {
       "id": 3360689775,
@@ -177984,6 +177984,38 @@
     {
       "id": 81511145012103,
       "name": "🐰 Hoppin' DIP Emote"
+    },
+    {
+      "id": 72208872566829,
+      "name": "Fairy sit floating anime girl emote"
+    },
+    {
+      "id": 103976448844140,
+      "name": "KATSEYE - GNARLI"
+    },
+    {
+      "id": 130149780566314,
+      "name": "Sights emote"
+    },
+    {
+      "id": 108637462377816,
+      "name": "Bang Bang Bang Chainsaw man emote"
+    },
+    {
+      "id": 127555093843969,
+      "name": "Cute Anime Sit"
+    },
+    {
+      "id": 118938393966411,
+      "name": "Inverted levitation"
+    },
+    {
+      "id": 72108651840158,
+      "name": "Headless aura flout{FREE HEADLESS}"
+    },
+    {
+      "id": 139600236824576,
+      "name": "Animation"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 45584,
-  "lastUpdate": "2026-05-09T16:40:32.001Z",
+  "totalItems": 45586,
+  "lastUpdate": "2026-05-09T17:41:20.626Z",
   "data": [
     {
       "id": 3360689775,
@@ -182324,6 +182324,14 @@
     {
       "id": 101268693254022,
       "name": "Raiden Armstrong Fighting"
+    },
+    {
+      "id": 75139586766599,
+      "name": "Floating Aura"
+    },
+    {
+      "id": 104113842260885,
+      "name": "Sukuna Aura Pose"
     }
   ]
 }

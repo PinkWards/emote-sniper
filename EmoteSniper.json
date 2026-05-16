@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 46630,
-  "lastUpdate": "2026-05-16T19:56:10.320Z",
+  "totalItems": 46635,
+  "lastUpdate": "2026-05-16T20:37:54.526Z",
   "data": [
     {
       "id": 3360689775,
@@ -186508,6 +186508,26 @@
     {
       "id": 119068151370770,
       "name": "Diva Aura Pose Emote"
+    },
+    {
+      "id": 88051561254596,
+      "name": "♡ cute shy tilt profile pose ♡ "
+    },
+    {
+      "id": 96099708810713,
+      "name": "Avgn Bop ⭐ORIGINAL⭐"
+    },
+    {
+      "id": 104787846596337,
+      "name": "Scouse Stepper (Esdeekid)"
+    },
+    {
+      "id": 116356175370728,
+      "name": "Floating Menacing Aura"
+    },
+    {
+      "id": 83750186174176,
+      "name": "[TFCS-005] Dark Convoy's Transformation Emote"
     }
   ]
 }

@@ -108,15 +108,6 @@ async function fetchData(baseUrl, cursor = "", maxRetries = 3) {
     }
 }
 
-function extractAnimationItems(bundledItems) {
-    if (!bundledItems || !Array.isArray(bundledItems)) return [];
-
-    return bundledItems.filter(item => {
-        if (item.type === "UserOutfit") return false;
-        return ANIMATION_ASSET_TYPES.has(item.assetType);
-    });
-}
-
 async function fetchFromAPI(apiInfo, existingData) {
     const apiItems = [];
     let nextPageCursor = null;
@@ -136,50 +127,48 @@ async function fetchFromAPI(apiInfo, existingData) {
 
             if (response.data && Array.isArray(response.data)) {
                 response.data.forEach((item) => {
+                    if (existingData.ids.has(item.id)) {
+                        duplicateCount++;
+                        return;
+                    }
+
                     if (apiInfo.extractAnimations) {
-                        // ── Only process actual Bundles ──
                         if (item.itemType !== "Bundle") {
                             skippedNonBundle++;
                             return;
                         }
 
-                        if (existingData.ids.has(item.id)) {
-                            duplicateCount++;
-                            return;
-                        }
+                        const bundledItems = item.bundledItems || [];
+                        const animationAssets = bundledItems.filter(
+                            (bi) =>
+                                bi.type !== "UserOutfit" &&
+                                ANIMATION_ASSET_TYPES.has(bi.assetType)
+                        );
 
-                        // ── Extract animation assets from bundledItems ──
-                        const animations = extractAnimationItems(item.bundledItems);
-
-                        if (animations.length === 0) {
+                        if (animationAssets.length === 0) {
                             skippedNoAnimations++;
                             return;
                         }
 
                         const bundledAssets = {};
-                        animations.forEach((anim, index) => {
-                            bundledAssets[(index + 1).toString()] = [anim.id];
+                        let counter = 1;
+
+                        animationAssets.forEach((anim) => {
+                            const key = (counter++).toString();
+                            bundledAssets[key] = [anim.id];
                         });
 
-                        const itemData = {
+                        apiItems.push({
                             id: item.id,
                             name: item.name,
-                            bundledItems: bundledAssets,
-                            isBundleAnimation: true
-                        };
+                            bundledItems: bundledAssets
+                        });
 
-                        apiItems.push(itemData);
                         existingData.ids.add(item.id);
                         newItemsCount++;
 
-                        log(`${apiInfo.name} - ✓ "${item.name}" has ${animations.length} animations`);
+                        log(`${apiInfo.name} - ✓ "${item.name}" → ${animationAssets.length} animations`);
                     } else {
-                        // ── Original logic for Basic/Latest/Animation APIs ──
-                        if (existingData.ids.has(item.id)) {
-                            duplicateCount++;
-                            return;
-                        }
-
                         const itemData = {
                             id: item.id,
                             name: item.name
@@ -299,7 +288,7 @@ async function processAPIsByFile() {
 }
 
 async function main() {
-    log("Starting Enhanced EmoteSniper with Animation + Bundle Animation support...");
+    log("Starting Enhanced EmoteSniper with Bundle Animation support...");
 
     try {
         const { results, duration } = await processAPIsByFile();

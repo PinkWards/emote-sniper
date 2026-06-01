@@ -19,6 +19,14 @@ const APIs = [
         baseUrl:
             "https://catalog.roproxy.com/v1/search/items/details?Category=12&Subcategory=38&salesTypeFilter=1&Limit=30",
         outputFile: "AnimationSniper.json"
+    },
+    {
+        name: "Character Bundle Animations API",
+        baseUrl:
+            "https://catalog.roproxy.com/v1/search/items/details?ItemType=Bundle&salesTypeFilter=1&Limit=30",
+        outputFile: "AnimationSniper.json",
+        extractAnimations: true,
+        maxPages: 10
     }
 ];
 
@@ -89,12 +97,89 @@ async function fetchData(baseUrl, cursor = "", maxRetries = 3) {
     }
 }
 
+async function fetchSimple(url, maxRetries = 3) {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            const data = await new Promise((resolve, reject) => {
+                const timeout = setTimeout(() => {
+                    reject(new Error("Request timeout"));
+                }, 30000);
+
+                https
+                    .get(url, (res) => {
+                        clearTimeout(timeout);
+                        let data = "";
+
+                        if (res.statusCode !== 200) {
+                            reject(new Error(`HTTP Error: ${res.statusCode}`));
+                            return;
+                        }
+
+                        res.on("data", (chunk) => {
+                            data += chunk;
+                        });
+
+                        res.on("end", () => {
+                            try {
+                                const jsonData = JSON.parse(data);
+                                resolve(jsonData);
+                            } catch (error) {
+                                reject(new Error("JSON parsing error"));
+                            }
+                        });
+                    })
+                    .on("error", (error) => {
+                        clearTimeout(timeout);
+                        reject(error);
+                    });
+            });
+
+            return data;
+        } catch (error) {
+            if (attempt === maxRetries) {
+                throw error;
+            }
+            await new Promise((resolve) => setTimeout(resolve, 2000 * attempt));
+        }
+    }
+}
+
+async function fetchBundleAnimations(bundleId) {
+    try {
+        const url = `https://catalog.roproxy.com/v1/bundles/${bundleId}/bundled-items`;
+        const response = await fetchSimple(url);
+
+        const animationAssets = [];
+        const items = response.data || [];
+
+        items.forEach(item => {
+            const isAnimation =
+                item.assetTypeId === 24 ||
+                (item.assetType && item.assetType.name === "Animation") ||
+                item.type === "Animation";
+
+            if (isAnimation && item.id) {
+                animationAssets.push({
+                    id: item.id,
+                    name: item.name || `Animation ${animationAssets.length + 1}`
+                });
+            }
+        });
+
+        return animationAssets;
+    } catch (error) {
+        log(`Error fetching bundle ${bundleId} animations: ${error.message}`);
+        return [];
+    }
+}
+
 async function fetchFromAPI(apiInfo, existingData) {
     const apiItems = [];
     let nextPageCursor = null;
     let pageCount = 0;
     let newItemsCount = 0;
     let duplicateCount = 0;
+    const maxPages = apiInfo.maxPages || Infinity;
 
     try {
         do {
@@ -104,15 +189,37 @@ async function fetchFromAPI(apiInfo, existingData) {
             const response = await fetchData(apiInfo.baseUrl, nextPageCursor);
 
             if (response.data && Array.isArray(response.data)) {
-                response.data.forEach((item) => {
+                for (const item of response.data) {
                     if (existingData.ids.has(item.id)) {
                         duplicateCount++;
-                    } else {
-                        const itemData = {
-                            id: item.id,
-                            name: item.name
-                        };
+                        continue;
+                    }
 
+                    const itemData = {
+                        id: item.id,
+                        name: item.name
+                    };
+
+                    if (apiInfo.extractAnimations) {
+                        log(`${apiInfo.name} - Checking bundle: ${item.name} (${item.id})`);
+                        const animations = await fetchBundleAnimations(item.id);
+
+                        if (animations.length > 0) {
+                            const bundledAssets = {};
+                            animations.forEach((anim, index) => {
+                                bundledAssets[(index + 1).toString()] = [anim.id];
+                            });
+                            itemData.bundledItems = bundledAssets;
+                            itemData.isBundleAnimation = true;
+
+                            apiItems.push(itemData);
+                            existingData.ids.add(item.id);
+                            newItemsCount++;
+                            log(`${apiInfo.name} - Found ${animations.length} animations in "${item.name}"`);
+                        }
+
+                        await new Promise((resolve) => setTimeout(resolve, 1000));
+                    } else {
                         if (item.bundledItems && Array.isArray(item.bundledItems)) {
                             const bundledAssets = {};
                             let animCounter = 1;
@@ -139,12 +246,12 @@ async function fetchFromAPI(apiInfo, existingData) {
                         existingData.ids.add(item.id);
                         newItemsCount++;
                     }
-                });
+                }
             }
 
             nextPageCursor = response.nextPageCursor;
             await new Promise((resolve) => setTimeout(resolve, 1000));
-        } while (nextPageCursor && nextPageCursor.trim() !== "");
+        } while (nextPageCursor && nextPageCursor.trim() !== "" && pageCount < maxPages);
     } catch (error) {
         log(`Error in ${apiInfo.name}: ${error.message}`);
     }
@@ -204,7 +311,6 @@ async function processAPIsByFile() {
             log(`${api.name} - New: ${result.newItems}, Duplicates: ${result.duplicates}`);
         }
 
-
         const saveSuccess = saveData(allItems, filename);
 
         results[filename] = {
@@ -224,7 +330,7 @@ async function processAPIsByFile() {
 }
 
 async function main() {
-    log("Starting Enhanced EmoteSniper with Animation support...");
+    log("Starting Enhanced EmoteSniper with Animation + Bundle Animation support...");
 
     try {
         const { results, duration } = await processAPIsByFile();

@@ -1,14 +1,6 @@
 const https = require("https");
 const fs = require("fs");
 
-// ============================================================
-// CONFIG: Set your GitHub raw URL for AnimationSniper.json here
-// ============================================================
-const GITHUB_SOURCES = {
-    "AnimationSniper.json":
-        "https://raw.githubusercontent.com/PinkWards/emote-sniper/main/AnimationSniper.json"
-};
-
 const APIs = [
     {
         name: "Basic API",
@@ -30,189 +22,23 @@ const APIs = [
     }
 ];
 
-// ============================================================
-// Known animation type names for extraction from bundled items
-// ============================================================
-const ANIM_TYPES = ["Climb", "Fall", "Walk", "Swim", "SwimIdle", "Idle", "Run", "Jump"];
-
 function log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
-}
-
-// ============================================================
-// Extract animation type from a name string
-// ============================================================
-function extractAnimType(name) {
-    if (!name || typeof name !== "string") return null;
-    const lower = name.toLowerCase();
-    for (const t of ANIM_TYPES) {
-        if (lower.includes(t.toLowerCase())) {
-            return t;
-        }
-    }
-    return null;
-}
-
-// ============================================================
-// VALIDATION: Ensures an item has a valid id and name
-// ============================================================
-function isValidItem(item) {
-    if (!item || typeof item !== "object") return false;
-    if (item.id === undefined || item.id === null) return false;
-    if (typeof item.id !== "number" || isNaN(item.id)) return false;
-    if (!item.name || typeof item.name !== "string" || item.name.trim() === "") return false;
-    return true;
-}
-
-// ============================================================
-// Validate a single animation entry {id, name}
-// ============================================================
-function isValidAnimEntry(entry) {
-    if (!entry || typeof entry !== "object") return false;
-    if (entry.id === undefined || entry.id === null) return false;
-    if (typeof entry.id !== "number" || isNaN(entry.id)) return false;
-    if (!entry.name || typeof entry.name !== "string" || entry.name.trim() === "") return false;
-    return true;
-}
-
-// ============================================================
-// Validate and clean bundledAnimations
-// ============================================================
-function cleanBundledAnimations(bundledAnimations) {
-    if (!bundledAnimations || typeof bundledAnimations !== "object" || Array.isArray(bundledAnimations)) {
-        return null;
-    }
-
-    const cleaned = {};
-    let hasValid = false;
-
-    for (const [typeKey, entries] of Object.entries(bundledAnimations)) {
-        if (!Array.isArray(entries)) continue;
-
-        const validEntries = entries
-            .filter(e => isValidAnimEntry(e))
-            .map(e => ({
-                id: e.id,
-                name: e.name.trim()
-            }));
-
-        if (validEntries.length > 0) {
-            cleaned[typeKey] = validEntries;
-            hasValid = true;
-        }
-    }
-
-    return hasValid ? cleaned : null;
-}
-
-// ============================================================
-// Validate and clean an entire item
-// ============================================================
-function cleanItem(item) {
-    const cleaned = {
-        id: item.id,
-        name: item.name.trim()
-    };
-
-    const anims = cleanBundledAnimations(item.bundledAnimations);
-    if (anims) {
-        cleaned.bundledAnimations = anims;
-    }
-
-    return cleaned;
 }
 
 function loadExistingData(filename) {
     try {
         if (fs.existsSync(filename)) {
             const data = JSON.parse(fs.readFileSync(filename, "utf8"));
-            const rawItems = data.data || [];
-
-            const existingItems = [];
-            const existingIds = new Set();
-
-            for (const item of rawItems) {
-                if (isValidItem(item)) {
-                    const cleaned = cleanItem(item);
-                    if (!existingIds.has(cleaned.id)) {
-                        existingItems.push(cleaned);
-                        existingIds.add(cleaned.id);
-                    }
-                } else {
-                    log(`[VALIDATION] Skipped invalid local item in ${filename}: ${JSON.stringify(item)}`);
-                }
-            }
-
-            log(`[LOCAL] Loaded ${existingItems.length} valid items from ${filename}`);
+            const existingItems = data.data || [];
+            const existingIds = new Set(existingItems.map((item) => item.id));
             return { items: existingItems, ids: existingIds };
         }
     } catch (error) {
-        log(`Error reading ${filename}, starting fresh: ${error.message}`);
+        log(`Error reading ${filename}, starting fresh`);
     }
     return { items: [], ids: new Set() };
-}
-
-// ============================================================
-// Fetch baseline data from GitHub — these items are NEVER removed
-// ============================================================
-async function fetchGitHubData(filename) {
-    const url = GITHUB_SOURCES[filename];
-    if (!url) {
-        log(`[GITHUB] No GitHub source configured for ${filename}, skipping`);
-        return { items: [], ids: new Set() };
-    }
-
-    try {
-        log(`[GITHUB] Fetching ${filename} from GitHub...`);
-        const data = await new Promise((resolve, reject) => {
-            const timeout = setTimeout(() => reject(new Error("GitHub request timeout")), 30000);
-
-            https.get(url, (res) => {
-                clearTimeout(timeout);
-                let body = "";
-
-                if (res.statusCode !== 200) {
-                    reject(new Error(`GitHub HTTP ${res.statusCode}`));
-                    return;
-                }
-
-                res.on("data", (chunk) => (body += chunk));
-                res.on("end", () => {
-                    try {
-                        resolve(JSON.parse(body));
-                    } catch (e) {
-                        reject(new Error("GitHub JSON parse error"));
-                    }
-                });
-            }).on("error", (err) => {
-                clearTimeout(timeout);
-                reject(err);
-            });
-        });
-
-        const rawItems = data.data || [];
-        const items = [];
-        const ids = new Set();
-
-        for (const item of rawItems) {
-            if (isValidItem(item)) {
-                const cleaned = cleanItem(item);
-                if (!ids.has(cleaned.id)) {
-                    items.push(cleaned);
-                    ids.add(cleaned.id);
-                }
-            } else {
-                log(`[GITHUB VALIDATION] Skipped invalid item in ${filename}: ${JSON.stringify(item)}`);
-            }
-        }
-
-        log(`[GITHUB] Loaded ${items.length} valid items from GitHub for ${filename}`);
-        return { items, ids };
-    } catch (error) {
-        log(`[GITHUB] Failed to fetch ${filename} from GitHub: ${error.message}`);
-        return { items: [], ids: new Set() };
-    }
 }
 
 async function fetchData(baseUrl, cursor = "", maxRetries = 3) {
@@ -263,44 +89,6 @@ async function fetchData(baseUrl, cursor = "", maxRetries = 3) {
     }
 }
 
-// ============================================================
-// Convert API bundledItems to bundledAnimations format
-// ============================================================
-function convertBundledItemsToAnimations(bundledItems, parentName) {
-    if (!bundledItems || !Array.isArray(bundledItems)) return null;
-
-    const animations = {};
-
-    for (const bundledItem of bundledItems) {
-        if (bundledItem.type === "UserOutfit") continue;
-        if (!bundledItem.id) continue;
-
-        const animName = bundledItem.name || parentName || "";
-        const animType = extractAnimType(animName);
-
-        if (animType) {
-            if (!animations[animType]) {
-                animations[animType] = [];
-            }
-            animations[animType].push({
-                id: bundledItem.id,
-                name: animName.trim()
-            });
-        } else {
-            const genericKey = `Animation_${Object.keys(animations).length + 1}`;
-            if (!animations[genericKey]) {
-                animations[genericKey] = [];
-            }
-            animations[genericKey].push({
-                id: bundledItem.id,
-                name: animName.trim()
-            });
-        }
-    }
-
-    return Object.keys(animations).length > 0 ? animations : null;
-}
-
 async function fetchFromAPI(apiInfo, existingData) {
     const apiItems = [];
     let nextPageCursor = null;
@@ -326,22 +114,30 @@ async function fetchFromAPI(apiInfo, existingData) {
                         };
 
                         if (item.bundledItems && Array.isArray(item.bundledItems)) {
-                            const animations = convertBundledItemsToAnimations(
-                                item.bundledItems,
-                                item.name
-                            );
-                            if (animations) {
-                                itemData.bundledAnimations = animations;
+                            const bundledAssets = {};
+                            let animCounter = 1;
+
+                            item.bundledItems.forEach(bundledItem => {
+                                if (bundledItem.type === "UserOutfit") return;
+
+                                const typeKey = (animCounter++).toString();
+
+                                if (bundledItem.id) {
+                                    if (!bundledAssets[typeKey]) {
+                                        bundledAssets[typeKey] = [];
+                                    }
+                                    bundledAssets[typeKey].push(bundledItem.id);
+                                }
+                            });
+
+                            if (Object.keys(bundledAssets).length > 0) {
+                                itemData.bundledItems = bundledAssets;
                             }
                         }
 
-                        if (isValidItem(itemData)) {
-                            apiItems.push(itemData);
-                            existingData.ids.add(item.id);
-                            newItemsCount++;
-                        } else {
-                            log(`[API VALIDATION] Skipped invalid API item: ${JSON.stringify(itemData)}`);
-                        }
+                        apiItems.push(itemData);
+                        existingData.ids.add(item.id);
+                        newItemsCount++;
                     }
                 });
             }
@@ -365,7 +161,7 @@ function saveData(items, filename) {
         keyword: null,
         totalItems: items.length,
         lastUpdate: new Date().toISOString(),
-        data: items
+        data: items,
     };
 
     try {
@@ -382,7 +178,7 @@ async function processAPIsByFile() {
     log("Starting combined update...");
 
     const apisByFile = {};
-    APIs.forEach((api) => {
+    APIs.forEach(api => {
         if (!apisByFile[api.outputFile]) {
             apisByFile[api.outputFile] = [];
         }
@@ -394,56 +190,30 @@ async function processAPIsByFile() {
     for (const [filename, apis] of Object.entries(apisByFile)) {
         log(`Processing ${filename}...`);
 
-        const githubData = await fetchGitHubData(filename);
-        const localData = loadExistingData(filename);
-
-        const mergedItems = [];
-        const mergedIds = new Set();
-
-        for (const item of githubData.items) {
-            if (!mergedIds.has(item.id)) {
-                mergedItems.push(item);
-                mergedIds.add(item.id);
-            }
-        }
-
-        for (const item of localData.items) {
-            if (!mergedIds.has(item.id)) {
-                mergedItems.push(item);
-                mergedIds.add(item.id);
-            }
-        }
-
-        log(`[MERGE] ${filename}: ${githubData.items.length} from GitHub + ${localData.items.length} from local = ${mergedItems.length} merged`);
-
-        const existingData = { items: mergedItems, ids: mergedIds };
-
+        const existingData = loadExistingData(filename);
+        const allItems = [...existingData.items];
         let totalNewItems = 0;
         let totalDuplicates = 0;
 
         for (const api of apis) {
             const result = await fetchFromAPI(api, existingData);
-            mergedItems.push(...result.items);
+            allItems.push(...result.items);
             totalNewItems += result.newItems;
             totalDuplicates += result.duplicates;
 
             log(`${api.name} - New: ${result.newItems}, Duplicates: ${result.duplicates}`);
         }
 
-        const saveSuccess = saveData(mergedItems, filename);
+        const saveSuccess = saveData(allItems, filename);
 
         results[filename] = {
             success: saveSuccess,
-            totalItems: mergedItems.length,
-            githubItems: githubData.items.length,
-            localItems: localData.items.length,
+            totalItems: allItems.length,
             newItems: totalNewItems,
             duplicates: totalDuplicates
         };
 
-        log(
-            `${filename} - Total: ${mergedItems.length} (GitHub: ${githubData.items.length}, Local: ${localData.items.length}, New API: ${totalNewItems})`
-        );
+        log(`${filename} - Total: ${allItems.length}, New: ${totalNewItems}`);
     }
 
     const duration = ((Date.now() - startTime) / 1000).toFixed(2);
@@ -464,9 +234,7 @@ async function main() {
                 allSuccess = false;
                 log(`Failed to save ${filename}`);
             } else {
-                log(
-                    `✓ ${filename}: ${result.totalItems} items (GitHub: ${result.githubItems}, Local: ${result.localItems}, New: ${result.newItems})`
-                );
+                log(`✓ ${filename}: ${result.totalItems} items (${result.newItems} new)`);
             }
         }
 

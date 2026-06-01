@@ -12,6 +12,14 @@ const ANIMATION_ASSET_TYPES = new Set([
     55   // Walk
 ]);
 
+// Generic animations shared by every default Rthro/Base Body character
+const GENERIC_ANIMATION_IDS = new Set([
+    2510230574, 2510235063, 2510233257, 2510236649,
+    2510238627, 2510240941, 2510242378,          // Rthro
+    11600317961, 11600319649, 11600321661, 11600324801,
+    11600327265, 11600329588, 11600331426         // Base Body
+]);
+
 const APIs = [
     {
         name: "Basic API",
@@ -115,7 +123,7 @@ async function fetchFromAPI(apiInfo, existingData) {
     let newItemsCount = 0;
     let duplicateCount = 0;
     let skippedNonBundle = 0;
-    let skippedNoAnimations = 0;
+    let skippedGeneric = 0;
     const maxPages = apiInfo.maxPages || Infinity;
 
     try {
@@ -139,21 +147,26 @@ async function fetchFromAPI(apiInfo, existingData) {
                         }
 
                         const bundledItems = item.bundledItems || [];
-                        const animationAssets = bundledItems.filter(
-                            (bi) =>
-                                bi.type !== "UserOutfit" &&
-                                ANIMATION_ASSET_TYPES.has(bi.assetType)
-                        );
+                        
+                        // Filter for animations BUT exclude generic ones
+                        const uniqueAnimations = bundledItems.filter((bi) => {
+                            if (bi.type === "UserOutfit") return false;
+                            if (!ANIMATION_ASSET_TYPES.has(bi.assetType)) return false;
+                            if (GENERIC_ANIMATION_IDS.has(bi.id)) return false;
+                            if (bi.name && (bi.name.startsWith("Rthro ") || bi.name.startsWith("Base Body "))) return false;
+                            return true;
+                        });
 
-                        if (animationAssets.length === 0) {
-                            skippedNoAnimations++;
+                        // Skip bundles that have no unique animations
+                        if (uniqueAnimations.length === 0) {
+                            skippedGeneric++;
                             return;
                         }
 
                         const bundledAssets = {};
                         let counter = 1;
 
-                        animationAssets.forEach((anim) => {
+                        uniqueAnimations.forEach((anim) => {
                             const key = (counter++).toString();
                             bundledAssets[key] = [anim.id];
                         });
@@ -167,7 +180,7 @@ async function fetchFromAPI(apiInfo, existingData) {
                         existingData.ids.add(item.id);
                         newItemsCount++;
 
-                        log(`${apiInfo.name} - ✓ "${item.name}" → ${animationAssets.length} animations`);
+                        log(`${apiInfo.name} - ✓ "${item.name}" → ${uniqueAnimations.length} unique animations`);
                     } else {
                         const itemData = {
                             id: item.id,
@@ -211,7 +224,7 @@ async function fetchFromAPI(apiInfo, existingData) {
     }
 
     if (apiInfo.extractAnimations) {
-        log(`${apiInfo.name} - Skipped: ${skippedNonBundle} non-bundles, ${skippedNoAnimations} bundles without animations`);
+        log(`${apiInfo.name} - Skipped: ${skippedNonBundle} non-bundles, ${skippedGeneric} generic-only bundles`);
     }
 
     return {
@@ -288,7 +301,7 @@ async function processAPIsByFile() {
 }
 
 async function main() {
-    log("Starting Enhanced EmoteSniper with Bundle Animation support...");
+    log("Starting Enhanced EmoteSniper with Unique Bundle Animation support...");
 
     try {
         const { results, duration } = await processAPIsByFile();

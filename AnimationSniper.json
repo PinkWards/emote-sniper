@@ -1,1445 +1,1617 @@
 {
   "keyword": null,
-  "totalItems": 427,
-  "lastUpdate": "2026-06-01T06:17:20.138Z",
+  "totalItems": 81,
+  "lastUpdate": "2026-06-01T09:28:34.909Z",
   "data": [
     {
-      "id": 2623795,
-      "name": "adidas Community Animation Pack",
+      "id": -1,
+      "name": "Sneaky",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 123695349157584,
-            "name": "adidas Community Animation Pack"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 93993406355955,
-            "name": "adidas Community Animation Pack"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 106810508343012,
-            "name": "adidas Community Animation Pack"
-          }
-        ],
         "Swim": [
           {
-            "id": 106537993816942,
-            "name": "adidas Community Animation Pack"
+            "id": 1132500520,
+            "name": "Sneaky Swim"
+          }
+        ],
+        "Climb": [
+          {
+            "id": 1132461372,
+            "name": "Sneaky Climb"
           }
         ],
         "Idle": [
           {
-            "id": 126354114956642,
-            "name": "adidas Community Animation Pack"
-          }
-        ],
-        "Run": [
+            "id": 1132473842,
+            "name": "Sneaky Idle"
+          },
           {
-            "id": 124765145869332,
-            "name": "adidas Community Animation Pack"
+            "id": 1132477671,
+            "name": "Sneaky Idle"
           }
         ],
         "Jump": [
           {
-            "id": 115715495289805,
-            "name": "adidas Community Animation Pack"
+            "id": 1132489853,
+            "name": "Sneaky Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 1132506407,
+            "name": "Sneaky SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 1132469004,
+            "name": "Sneaky Fall"
+          }
+        ],
+        "Run": [
+          {
+            "id": 1132494274,
+            "name": "Sneaky Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 1132510133,
+            "name": "Sneaky Walk"
           }
         ]
       }
     },
     {
-      "id": 667,
-      "name": "Oldschool Animation Pack",
+      "id": -2,
+      "name": "Patrol",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 5319900634,
-            "name": "Oldschool Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 5319909330,
-            "name": "Oldschool Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 5319914476,
-            "name": "Oldschool Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 5319917561,
-            "name": "Oldschool Jump"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 5319922112,
-            "name": "Oldschool Idle"
-          }
-        ],
         "Swim": [
           {
-            "id": 5319927054,
-            "name": "Oldschool Swim"
+            "id": 1151204998,
+            "name": "Patrol Swim"
           }
         ],
         "Climb": [
           {
-            "id": 5319931619,
-            "name": "Oldschool Climb"
+            "id": 1148811837,
+            "name": "Patrol Climb"
+          }
+        ],
+        "Idle": [
+          {
+            "id": 1149612882,
+            "name": "Patrol Idle"
+          },
+          {
+            "id": 1150842221,
+            "name": "Patrol Idle"
+          }
+        ],
+        "Jump": [
+          {
+            "id": 1148811837,
+            "name": "Patrol Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 1151221899,
+            "name": "Patrol SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 1148863382,
+            "name": "Patrol Fall"
+          }
+        ],
+        "Run": [
+          {
+            "id": 1150967949,
+            "name": "Patrol Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 1151231493,
+            "name": "Patrol Walk"
           }
         ]
       }
     },
     {
-      "id": 4294795,
-      "name": "adidas aura animation pack",
+      "id": -3,
+      "name": "Popstar",
       "bundledAnimations": {
+        "Swim": [
+          {
+            "id": 1212998578,
+            "name": "Popstar Swim"
+          }
+        ],
         "Climb": [
           {
-            "id": 140398319728398,
-            "name": "adidas aura - climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 99457463463495,
-            "name": "adidas aura - fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 129527230938281,
-            "name": "adidas aura - jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 123973978164540,
-            "name": "adidas aura - run"
+            "id": 1213044953,
+            "name": "Popstar Climb"
           }
         ],
         "Idle": [
           {
-            "id": 73137983344853,
-            "name": "adidas aura - idle"
+            "id": 1212900985,
+            "name": "Popstar Idle"
+          },
+          {
+            "id": 1150842221,
+            "name": "Popstar Idle"
           }
         ],
-        "Swim": [
+        "Jump": [
           {
-            "id": 119007025452432,
-            "name": "adidas aura - swim"
+            "id": 1212954642,
+            "name": "Popstar Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 1212998578,
+            "name": "Popstar SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 1212900995,
+            "name": "Popstar Fall"
+          }
+        ],
+        "Run": [
+          {
+            "id": 1212980348,
+            "name": "Popstar Run"
           }
         ],
         "Walk": [
           {
-            "id": 75183215343859,
-            "name": "adidas aura - walk"
+            "id": 1212980338,
+            "name": "Popstar Walk"
           }
         ]
       }
     },
     {
-      "id": 356,
-      "name": "Rthro Animation Package",
+      "id": -4,
+      "name": "R6",
       "bundledAnimations": {
-        "Climb": [
+        "Swim": [
           {
-            "id": 2510230574,
-            "name": "Rthro Climb"
+            "id": 12518152696,
+            "name": "R6 Swim"
           }
         ],
-        "Fall": [
+        "Climb": [
           {
-            "id": 2510233257,
-            "name": "Rthro Fall"
+            "id": 12520982150,
+            "name": "R6 Climb"
           }
         ],
         "Idle": [
           {
-            "id": 2510235063,
-            "name": "Rthro Idle"
+            "id": 12521158637,
+            "name": "R6 Idle"
+          },
+          {
+            "id": 12521162526,
+            "name": "R6 Idle"
           }
         ],
         "Jump": [
           {
-            "id": 2510236649,
-            "name": "Rthro Jump"
+            "id": 12520880485,
+            "name": "R6 Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 12518152696,
+            "name": "R6 SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 12520972571,
+            "name": "R6 Fall"
           }
         ],
         "Run": [
           {
-            "id": 2510238627,
-            "name": "Rthro Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 2510240941,
-            "name": "Rthro Swim"
+            "id": 12518152696,
+            "name": "R6 Run"
           }
         ],
         "Walk": [
           {
-            "id": 2510242378,
-            "name": "Rthro Walk"
+            "id": 12518152696,
+            "name": "R6 Walk"
           }
         ]
       }
     },
     {
-      "id": 83,
-      "name": "Stylish Animation Pack",
+      "id": -5,
+      "name": "[VOTE] Boat",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 619509955,
-            "name": "Stylish Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 619511417,
-            "name": "Stylish Fall"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 619511648,
-            "name": "Stylish Idle"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 619511974,
-            "name": "Stylish Jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 619512153,
-            "name": "Stylish Run"
-          }
-        ],
         "Swim": [
           {
-            "id": 619512450,
-            "name": "Stylish Swim"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 619512767,
-            "name": "Stylish Walk"
+            "id": 85689117221382,
+            "name": "[VOTE] Boat Swim"
           }
         ]
       }
     },
     {
-      "id": 1189398,
-      "name": "Wicked Popular Animation Pack",
+      "id": -6,
+      "name": "Cowboy",
       "bundledAnimations": {
+        "Swim": [
+          {
+            "id": 1014406523,
+            "name": "Cowboy Swim"
+          }
+        ],
         "Climb": [
           {
-            "id": 135810009801094,
-            "name": "Popular - Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 83937116921114,
-            "name": "Popular - Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 130373407996664,
-            "name": "Popular - Jump"
+            "id": 1014380606,
+            "name": "Cowboy Climb"
           }
         ],
         "Idle": [
           {
-            "id": 101839542383818,
-            "name": "Popular - Idle"
+            "id": 1014390418,
+            "name": "Cowboy Idle"
+          },
+          {
+            "id": 1014398616,
+            "name": "Cowboy Idle"
+          }
+        ],
+        "Jump": [
+          {
+            "id": 1014394726,
+            "name": "Cowboy Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 1014411816,
+            "name": "Cowboy SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 1014384571,
+            "name": "Cowboy Fall"
           }
         ],
         "Run": [
           {
-            "id": 136276875045281,
-            "name": "Popular - Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 128475661806875,
-            "name": "Popular - Swim"
+            "id": 1014401683,
+            "name": "Cowboy Run"
           }
         ],
         "Walk": [
           {
-            "id": 133304526526319,
-            "name": "Popular - Walk"
+            "id": 1014421541,
+            "name": "Cowboy Walk"
           }
         ]
       }
     },
     {
-      "id": 82,
-      "name": "Robot Animation Pack",
+      "id": -7,
+      "name": "Confident",
       "bundledAnimations": {
-        "Climb": [
+        "Swim": [
           {
-            "id": 619521311,
-            "name": "Robot Climb"
+            "id": 1070009914,
+            "name": "Confident Swim"
           }
         ],
-        "Fall": [
+        "Climb": [
           {
-            "id": 619521521,
-            "name": "Robot Fall"
+            "id": 1069946257,
+            "name": "Confident Climb"
           }
         ],
         "Idle": [
           {
-            "id": 619521748,
-            "name": "Robot Idle"
+            "id": 1069977950,
+            "name": "Confident Idle"
+          },
+          {
+            "id": 1069987858,
+            "name": "Confident Idle"
           }
         ],
         "Jump": [
           {
-            "id": 619522088,
-            "name": "Robot Jump"
+            "id": 1069984524,
+            "name": "Confident Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 1070012133,
+            "name": "Confident SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 1069973677,
+            "name": "Confident Fall"
           }
         ],
         "Run": [
           {
-            "id": 619522386,
-            "name": "Robot Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 619522642,
-            "name": "Robot Swim"
+            "id": 1070001516,
+            "name": "Confident Run"
           }
         ],
         "Walk": [
           {
-            "id": 619522849,
-            "name": "Robot Walk"
+            "id": 1070017263,
+            "name": "Confident Walk"
           }
         ]
       }
     },
     {
-      "id": 63,
-      "name": "Mage Animation Package",
+      "id": -8,
+      "name": "NFL",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 754635032,
-            "name": "Mage Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 754636298,
-            "name": "Mage Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 754636589,
-            "name": "Mage Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 754637084,
-            "name": "Mage Jump"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 754637456,
-            "name": "Mage Idle"
-          }
-        ],
         "Swim": [
           {
-            "id": 754638471,
-            "name": "Mage Swim"
+            "id": 132697394189921,
+            "name": "NFL Swim"
           }
         ],
         "Climb": [
           {
-            "id": 754639239,
-            "name": "Mage Climb"
+            "id": 134630013742019,
+            "name": "NFL Climb"
+          }
+        ],
+        "Idle": [
+          {
+            "id": 92080889861410,
+            "name": "NFL Idle"
+          },
+          {
+            "id": 74451233229259,
+            "name": "NFL Idle"
+          }
+        ],
+        "Jump": [
+          {
+            "id": 119846112151352,
+            "name": "NFL Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 79090109939093,
+            "name": "NFL SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 129773241321032,
+            "name": "NFL Fall"
+          }
+        ],
+        "Run": [
+          {
+            "id": 117333533048078,
+            "name": "NFL Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 110358958299415,
+            "name": "NFL Walk"
           }
         ]
       }
     },
     {
-      "id": 4725295,
-      "name": "Glow Motion Animation Pack",
+      "id": -9,
+      "name": "[VOTE] Aura",
       "bundledAnimations": {
-        "Climb": [
+        "Swim": [
           {
-            "id": 122281742555667,
-            "name": "Glow Motion Animation Pack"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 76868289213402,
-            "name": "Glow Motion Animation Pack"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 72213510878866,
-            "name": "Glow Motion Animation Pack"
+            "id": 80645586378736,
+            "name": "[VOTE] Aura Swim"
           }
         ],
         "Jump": [
           {
-            "id": 126137138096765,
-            "name": "Glow Motion Animation Pack"
+            "id": 93382302369459,
+            "name": "[VOTE] Aura Jump"
           }
         ],
         "Run": [
           {
-            "id": 91745899537026,
-            "name": "Glow Motion Animation Pack"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 78813763153341,
-            "name": "Glow Motion Animation Pack"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 124733969277188,
-            "name": "Glow Motion Animation Pack"
+            "id": 120142877225965,
+            "name": "[VOTE] Aura Run"
           }
         ]
       }
     },
     {
-      "id": 4164795,
-      "name": "Amazon Unboxed Animation Pack",
+      "id": -10,
+      "name": "Princess",
       "bundledAnimations": {
+        "Swim": [
+          {
+            "id": 941018893,
+            "name": "Princess Swim"
+          }
+        ],
         "Climb": [
           {
-            "id": 117011755848398,
-            "name": "Amazon Unboxed Animation Pack - Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 125108870423182,
-            "name": "Amazon Unboxed Animation Pack - Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 110418911914024,
-            "name": "Amazon Unboxed Animation Pack - Jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 114998633936467,
-            "name": "Amazon Unboxed Animation Pack - Run"
+            "id": 940996062,
+            "name": "Princess Climb"
           }
         ],
         "Idle": [
           {
-            "id": 82219139681769,
-            "name": "Amazon Unboxed Animation Pack - Idle"
+            "id": 941003647,
+            "name": "Princess Idle"
+          },
+          {
+            "id": 941013098,
+            "name": "Princess Idle"
           }
         ],
-        "Swim": [
+        "Jump": [
           {
-            "id": 137392271797713,
-            "name": "Amazon Unboxed Animation Pack - Swim"
+            "id": 941008832,
+            "name": "Princess Jump"
+          }
+        ],
+        "SwimIdle": [
+          {
+            "id": 941025398,
+            "name": "Princess SwimIdle"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 941000007,
+            "name": "Princess Fall"
+          }
+        ],
+        "Run": [
+          {
+            "id": 941015281,
+            "name": "Princess Run"
           }
         ],
         "Walk": [
           {
-            "id": 128339543796138,
-            "name": "Amazon Unboxed Animation Pack - Walk"
+            "id": 941028902,
+            "name": "Princess Walk"
           }
         ]
       }
     },
     {
-      "id": 5134295,
-      "name": "Billie Eilish Animation Pack",
+      "id": -11,
+      "name": "[VOTE] Animal",
       "bundledAnimations": {
         "Climb": [
           {
-            "id": 95937554524959,
-            "name": "Billie Eilish climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 132771121298158,
-            "name": "Billie Eilish fall"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 82009039247070,
-            "name": "Billie Eilish idle"
+            "id": 124810859712282,
+            "name": "[VOTE] Animal Climb"
           }
         ],
         "Jump": [
           {
-            "id": 114806832298003,
-            "name": "Billie Eilish jump"
+            "id": 131203832825082,
+            "name": "[VOTE] Animal Jump"
           }
         ],
-        "Run": [
+        "Fall": [
           {
-            "id": 107895705891639,
-            "name": "Billie Eilish run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 78340083978503,
-            "name": "Billie Eilish swim"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 74056522836252,
-            "name": "Billie Eilish walk"
+            "id": 77069224396280,
+            "name": "[VOTE] Animal Fall"
           }
         ]
       }
     },
     {
-      "id": 80,
-      "name": "Zombie Animation Pack",
+      "id": -12,
+      "name": "Ghost",
       "bundledAnimations": {
         "Climb": [
           {
-            "id": 619535091,
-            "name": "Zombie Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 619535616,
-            "name": "Zombie Fall"
+            "id": 616003713,
+            "name": "Ghost Climb"
           }
         ],
         "Idle": [
           {
-            "id": 619535834,
-            "name": "Zombie Idle"
+            "id": 616006778,
+            "name": "Ghost Idle"
+          },
+          {
+            "id": 616008087,
+            "name": "Ghost Idle"
           }
         ],
         "Jump": [
           {
-            "id": 619536283,
-            "name": "Zombie Jump"
+            "id": 616008936,
+            "name": "Ghost Jump"
           }
         ],
         "Run": [
           {
-            "id": 619536621,
-            "name": "Zombie Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 619537096,
-            "name": "Zombie Swim"
+            "id": 616013216,
+            "name": "Ghost Run"
           }
         ],
         "Walk": [
           {
-            "id": 619537468,
-            "name": "Zombie Walk"
+            "id": 616013216,
+            "name": "Ghost Walk"
           }
         ]
       }
     },
     {
-      "id": 43,
-      "name": "Toy Animation Pack",
+      "id": -13,
+      "name": "[VOTE] sticky",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 973766674,
-            "name": "Toy Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 973767371,
-            "name": "Toy Walk "
-          }
-        ],
-        "Fall": [
-          {
-            "id": 973768058,
-            "name": "Toy Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 973770652,
-            "name": "Toy Jump"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 973771666,
-            "name": "Toy Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 973772659,
-            "name": "Toy Swim"
-          }
-        ],
         "Climb": [
           {
-            "id": 973773170,
-            "name": "Toy Climb"
+            "id": 77520617871799,
+            "name": "[VOTE] sticky Climb"
           }
         ]
       }
     },
     {
-      "id": 1601900,
-      "name": "Catwalk Glam Animation Pack by e.l.f.",
+      "id": -14,
+      "name": "(UGC) Retro",
       "bundledAnimations": {
         "Climb": [
           {
-            "id": 104741822987331,
-            "name": "Catwalk Glam - Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 72706690305027,
-            "name": "Catwalk Glam - Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 138641066989023,
-            "name": "Catwalk Glam - Jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 75036746190467,
-            "name": "Catwalk Glam - Run"
+            "id": 121075390792786,
+            "name": "(UGC) Retro Climb"
           }
         ],
         "Idle": [
           {
-            "id": 101279640971758,
-            "name": "Catwalk Glam - Idle"
+            "id": 80479383912838,
+            "name": "(UGC) Retro Idle"
           }
         ],
-        "Swim": [
+        "Jump": [
           {
-            "id": 112231179705221,
-            "name": "Catwalk Glam - Swim"
+            "id": 139390570947836,
+            "name": "(UGC) Retro Jump"
+          }
+        ],
+        "Run": [
+          {
+            "id": 107806791584829,
+            "name": "(UGC) Retro Run"
           }
         ],
         "Walk": [
           {
-            "id": 103190462987721,
-            "name": "Catwalk Glam - Walk"
+            "id": 107806791584829,
+            "name": "(UGC) Retro Walk"
           }
         ]
       }
     },
     {
-      "id": 427999,
-      "name": "adidas Sports Animation Pack",
+      "id": -15,
+      "name": "Stylized Female",
       "bundledAnimations": {
-        "Run": [
+        "Climb": [
           {
-            "id": 18538133604,
-            "name": "adidas Sports - Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 18538146480,
-            "name": "adidas Sports - Walk"
+            "id": 4708184253,
+            "name": "Stylized Female Climb"
           }
         ],
         "Idle": [
           {
-            "id": 18538150608,
-            "name": "adidas Sports - Idle"
+            "id": 4708191566,
+            "name": "Stylized Female Idle"
+          },
+          {
+            "id": 4708192150,
+            "name": "Stylized Female Idle"
           }
         ],
         "Jump": [
           {
-            "id": 18538153691,
-            "name": "adidas Sports - Jump"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 18538158932,
-            "name": "adidas Sports - Swim"
+            "id": 4708188025,
+            "name": "Stylized Female Jump"
           }
         ],
         "Fall": [
           {
-            "id": 18538164337,
-            "name": "adidas Sports - Fall"
+            "id": 4708186162,
+            "name": "Stylized Female Fall"
           }
         ],
-        "Climb": [
+        "Run": [
           {
-            "id": 18538170170,
-            "name": "adidas Sports - Climb"
+            "id": 4708192705,
+            "name": "Stylized Female Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 4708193840,
+            "name": "Stylized Female Walk"
           }
         ]
       }
     },
     {
-      "id": 331856,
-      "name": "Bold Animation Pack by e.l.f.",
+      "id": -16,
+      "name": "R15 Reanimated",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 16744204409,
-            "name": "Bold Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 16744207822,
-            "name": "Bold Fall"
-          }
-        ],
         "Idle": [
           {
-            "id": 16744209868,
-            "name": "Bold Idle"
+            "id": 4211217646,
+            "name": "R15 Reanimated Idle"
+          },
+          {
+            "id": 4211218409,
+            "name": "R15 Reanimated Idle"
           }
         ],
         "Jump": [
           {
-            "id": 16744212581,
-            "name": "Bold Jump"
+            "id": 4211219390,
+            "name": "R15 Reanimated Jump"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 4211216152,
+            "name": "R15 Reanimated Fall"
           }
         ],
         "Run": [
           {
-            "id": 16744214662,
-            "name": "Bold Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 16744217055,
-            "name": "Bold Swim"
+            "id": 4211220381,
+            "name": "R15 Reanimated Run"
           }
         ],
         "Walk": [
           {
-            "id": 16744219182,
-            "name": "Bold Walk"
+            "id": 4211223236,
+            "name": "R15 Reanimated Walk"
           }
         ]
       }
     },
     {
-      "id": 56,
-      "name": "Cartoony Animation Package",
+      "id": -17,
+      "name": "[VOTE] Rope",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 837009922,
-            "name": "Cartoony Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 837010234,
-            "name": "Cartoony Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 837010685,
-            "name": "Cartoony Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 837011171,
-            "name": "Cartoony Jump"
-          }
-        ],
-        "Idle": [
-          {
-            "id": 837011741,
-            "name": "Cartoony Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 837012509,
-            "name": "Cartoony Swim"
-          }
-        ],
         "Climb": [
           {
-            "id": 837013990,
-            "name": "Cartoony Climb"
+            "id": 134977367563514,
+            "name": "[VOTE] Rope Climb"
           }
         ]
       }
     },
     {
-      "id": 4974195,
-      "name": "KATSEYE Animation Pack",
+      "id": -18,
+      "name": "[VOTE] warming up",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 130399277423748,
-            "name": "KATSEYE Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 84737112249504,
-            "name": "KATSEYE Fall"
-          }
-        ],
         "Idle": [
           {
-            "id": 125286451593779,
-            "name": "KATSEYE Idle"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 121868657321572,
-            "name": "KATSEYE Jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 140179859838109,
-            "name": "KATSEYE Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 87465102258861,
-            "name": "KATSEYE Swim"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 105967194765350,
-            "name": "KATSEYE Walk"
+            "id": 83573330053643,
+            "name": "[VOTE] warming up Idle"
           }
         ]
       }
     },
     {
-      "id": 48,
-      "name": "Elder Animation Package",
+      "id": -19,
+      "name": "Drooling Zombie",
       "bundledAnimations": {
-        "Walk": [
-          {
-            "id": 892267099,
-            "name": "Elder Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 892267521,
-            "name": "Elder Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 892267917,
-            "name": "Elder Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 892268340,
-            "name": "Elder Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 892268710,
-            "name": "Elder Swim"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 892269341,
-            "name": "Elder Climb"
+            "id": 3489171152,
+            "name": "Drooling Zombie Idle"
           }
         ],
         "Run": [
           {
-            "id": 892265784,
-            "name": "Elder Run"
+            "id": 3489173414,
+            "name": "Drooling Zombie Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 3489174223,
+            "name": "Drooling Zombie Walk"
           }
         ]
       }
     },
     {
-      "id": 39,
-      "name": "Bubbly Animation Package",
+      "id": -20,
+      "name": "mafioso",
       "bundledAnimations": {
-        "Swim": [
-          {
-            "id": 1018554245,
-            "name": "Bubbly Swim"
-          }
-        ],
         "Idle": [
           {
-            "id": 1018553897,
-            "name": "Bubbly Idle"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 1018553240,
-            "name": "Bubbly Jump"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 1018552770,
-            "name": "Bubbly Fall"
+            "id": 120527173641109,
+            "name": "mafioso Idle"
           }
         ],
         "Walk": [
           {
-            "id": 1018549681,
-            "name": "Bubbly Walk"
-          }
-        ],
-        "Run": [
-          {
-            "id": 1018548665,
-            "name": "Bubbly Run"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 1018554668,
-            "name": "Bubbly Climb"
+            "id": 86916179388467,
+            "name": "mafioso Walk"
           }
         ]
       }
     },
     {
-      "id": 33,
-      "name": "Vampire Animation Pack",
+      "id": -21,
+      "name": "(UGC) Noli",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 1113740510,
-            "name": "Vampire Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 1113741192,
-            "name": "Vampire Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 1113742092,
-            "name": "Vampire Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 1113742359,
-            "name": "Vampire Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 1113742618,
-            "name": "Vampire Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 1113742944,
-            "name": "Vampire Swim"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 1113743239,
-            "name": "Vampire Climb"
+            "id": 139360856809483,
+            "name": "(UGC) Noli Idle"
           }
         ]
       }
     },
     {
-      "id": 75,
-      "name": "Ninja Animation Package",
+      "id": -22,
+      "name": "Soldier",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 658830056,
-            "name": "Ninja Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 658831143,
-            "name": "Ninja Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 658831500,
-            "name": "Ninja Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 658832070,
-            "name": "Ninja Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 658832408,
-            "name": "Ninja Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 658832807,
-            "name": "Ninja Swim"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 658833139,
-            "name": "Ninja Climb"
+            "id": 3972151362,
+            "name": "Soldier Idle"
           }
         ]
       }
     },
     {
-      "id": 455003,
-      "name": "No Boundaries Animation Pack by Walmart",
+      "id": -23,
+      "name": "(UGC) 1x1x1x1",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 18755919175,
-            "name": "No Boundaries by Walmart - Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 18755922352,
-            "name": "No Boundaries by Walmart - Fall"
-          }
-        ],
         "Idle": [
           {
-            "id": 18755930927,
-            "name": "No Boundaries by Walmart - Idle"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 18755925411,
-            "name": "No Boundaries by Walmart - Jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 18755933883,
-            "name": "No Boundaries by Walmart - Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 18755938274,
-            "name": "No Boundaries by Walmart - Swim"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 18755942776,
-            "name": "No Boundaries by Walmart - Walk"
+            "id": 76780522821306,
+            "name": "(UGC) 1x1x1x1 Idle"
           }
         ]
       }
     },
     {
-      "id": 81,
-      "name": "Superhero Animation Pack",
+      "id": -24,
+      "name": "2016 Animation (mm2)",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 619527470,
-            "name": "Superhero Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 619527817,
-            "name": "Superhero Fall"
-          }
-        ],
         "Idle": [
           {
-            "id": 619528125,
-            "name": "Superhero Idle"
-          }
-        ],
-        "Jump": [
+            "id": 387947158,
+            "name": "2016 Animation (mm2) Idle"
+          },
           {
-            "id": 619528412,
-            "name": "Superhero Jump"
+            "id": 387947464,
+            "name": "2016 Animation (mm2) Idle"
           }
         ],
         "Run": [
           {
-            "id": 619528716,
-            "name": "Superhero Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 619529095,
-            "name": "Superhero Swim"
+            "id": 387947975,
+            "name": "2016 Animation (mm2) Run"
           }
         ],
         "Walk": [
           {
-            "id": 619529601,
-            "name": "Superhero Walk"
+            "id": 387947975,
+            "name": "2016 Animation (mm2) Walk"
           }
         ]
       }
     },
     {
-      "id": 79,
-      "name": "Levitation Animation Pack",
+      "id": -25,
+      "name": "cesus",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 619541458,
-            "name": "Levitation Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 619541867,
-            "name": "Levitation Fall"
-          }
-        ],
         "Idle": [
           {
-            "id": 619542203,
-            "name": "Levitation Idle"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 619542888,
-            "name": "Levitation Jump"
-          }
-        ],
-        "Run": [
-          {
-            "id": 619543231,
-            "name": "Levitation Run"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 619543721,
-            "name": "Levitation Swim"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 619544080,
-            "name": "Levitation Walk"
+            "id": 115879733952840,
+            "name": "cesus Idle"
           }
         ]
       }
     },
     {
-      "id": 4128695,
-      "name": "Wicked \"Dancing Through Life\" Animation Pack",
+      "id": -26,
+      "name": "dog",
       "bundledAnimations": {
-        "Climb": [
-          {
-            "id": 123509187015792,
-            "name": "Wicked \"Dancing Through Life\" Animation P… - Climb"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 124742764102674,
-            "name": "Wicked \"Dancing Through Life\" Animation Pa… - Fall"
-          }
-        ],
-        "Run": [
-          {
-            "id": 79789194522561,
-            "name": "Wicked \"Dancing Through Life\" Animation Pack - Run"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 111157411630082,
-            "name": "Wicked \"Dancing Through Life\" Animation Pa… - Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 82682578794949,
-            "name": "Wicked \"Dancing Through Life\" Animation Pa… - Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 135050138303161,
-            "name": "Wicked \"Dancing Through Life\" Animation Pa… - Swim"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 94133616443608,
-            "name": "Wicked \"Dancing Through Life\" Animation Pa… - Walk"
+            "id": 122475317803320,
+            "name": "dog Idle"
           }
         ]
       }
     },
     {
-      "id": 32,
-      "name": "Werewolf Animation Pack",
+      "id": -27,
+      "name": "(UGC) Coolkid",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 1113750642,
-            "name": "Werewolf Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 1113751657,
-            "name": "Werewolf Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 1113751889,
-            "name": "Werewolf Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 1113752285,
-            "name": "Werewolf Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 1113752682,
-            "name": "Werewolf Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 1113752975,
-            "name": "Werewolf Swim"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 1113754738,
-            "name": "Werewolf Climb"
+            "id": 95203125292023,
+            "name": "(UGC) Coolkid Idle"
           }
         ]
       }
     },
     {
-      "id": 34,
-      "name": "Astronaut Animation Pack",
+      "id": -28,
+      "name": "Sway",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 1090130630,
-            "name": "Astronaut Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 1090131576,
-            "name": "Astronaut Walk "
-          }
-        ],
-        "Fall": [
-          {
-            "id": 1090132063,
-            "name": "Astronaut Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 1090132507,
-            "name": "Astronaut Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 1090133099,
-            "name": "Astronaut Idle"
-          }
-        ],
-        "Swim": [
+            "id": 560832030,
+            "name": "Sway Idle"
+          },
           {
-            "id": 1090133583,
-            "name": "Astronaut Swim"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 1090134016,
-            "name": "Astronaut Climb"
+            "id": 560833564,
+            "name": "Sway Idle"
           }
         ]
       }
     },
     {
-      "id": 68,
-      "name": "Knight Animation Package",
+      "id": -29,
+      "name": "(UGC) Survivor Injured",
       "bundledAnimations": {
-        "Run": [
-          {
-            "id": 734325948,
-            "name": "Knight Run"
-          }
-        ],
-        "Walk": [
-          {
-            "id": 734326330,
-            "name": "Knight Walk"
-          }
-        ],
-        "Fall": [
-          {
-            "id": 734326679,
-            "name": "Knight Fall"
-          }
-        ],
-        "Jump": [
-          {
-            "id": 734326930,
-            "name": "Knight Jump"
-          }
-        ],
         "Idle": [
           {
-            "id": 734327140,
-            "name": "Knight Idle"
-          }
-        ],
-        "Swim": [
-          {
-            "id": 734327363,
-            "name": "Knight Swim"
-          }
-        ],
-        "Climb": [
-          {
-            "id": 734329002,
-            "name": "Knight Climb"
+            "id": 73905365652295,
+            "name": "(UGC) Survivor Injured Idle"
           }
         ]
       }
     },
     {
-      "id": 55,
-      "name": "Pirate Animation Package",
+      "id": -30,
+      "name": "(UGC) Slasher",
       "bundledAnimations": {
-        "Run": [
+        "Idle": [
           {
-            "id": 837023444,
-            "name": "Pirate Run"
+            "id": 140051337061095,
+            "name": "(UGC) Slasher Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -31,
+      "name": "(UGC) Magician",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 139433213852503,
+            "name": "(UGC) Magician Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -32,
+      "name": "UGC Oneleft",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 121217497452435,
+            "name": "UGC Oneleft Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -33,
+      "name": "Udzal",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 3303162274,
+            "name": "Udzal Idle"
+          },
+          {
+            "id": 3303162549,
+            "name": "Udzal Idle"
           }
         ],
         "Walk": [
           {
-            "id": 837023892,
-            "name": "Pirate Walk"
+            "id": 3303162967,
+            "name": "Udzal Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -34,
+      "name": "Realistic",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 17172918855,
+            "name": "Realistic Idle"
+          },
+          {
+            "id": 17173014241,
+            "name": "Realistic Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -35,
+      "name": "Very Long",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 18307781743,
+            "name": "Very Long Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -36,
+      "name": "AuraFarming",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 138665010911335,
+            "name": "AuraFarming Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -37,
+      "name": "(UGC) Zombie",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 77672872857991,
+            "name": "(UGC) Zombie Idle"
           }
         ],
-        "Fall": [
+        "Walk": [
           {
-            "id": 837024147,
-            "name": "Pirate Fall"
+            "id": 113603435314095,
+            "name": "(UGC) Zombie Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -38,
+      "name": "MrToilet",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 4417977954,
+            "name": "MrToilet Idle"
+          },
+          {
+            "id": 4417978624,
+            "name": "MrToilet Idle"
+          }
+        ],
+        "Run": [
+          {
+            "id": 4417979645,
+            "name": "MrToilet Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -39,
+      "name": "coolkid",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 92946600983329,
+            "name": "coolkid Idle"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 93206157668596,
+            "name": "coolkid Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -40,
+      "name": "(UGC) Retro Zombie",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 90806086002292,
+            "name": "(UGC) Retro Zombie Idle"
+          }
+        ],
+        "Run": [
+          {
+            "id": 140703855480494,
+            "name": "(UGC) Retro Zombie Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 140703855480494,
+            "name": "(UGC) Retro Zombie Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -41,
+      "name": "[VOTE] Mech Float",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 74447366032908,
+            "name": "[VOTE] Mech Float Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -42,
+      "name": "(UGC) TailWag",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 129026910898635,
+            "name": "(UGC) TailWag Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -43,
+      "name": "Badware",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 140131631438778,
+            "name": "Badware Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -44,
+      "name": "(UGC) John Doe",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 72526127498800,
+            "name": "(UGC) John Doe Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -45,
+      "name": "Borock",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 3293641938,
+            "name": "Borock Idle"
+          },
+          {
+            "id": 3293642554,
+            "name": "Borock Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -46,
+      "name": "[VOTE] Float",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 110375749767299,
+            "name": "[VOTE] Float Idle"
           }
         ],
         "Jump": [
           {
-            "id": 837024350,
-            "name": "Pirate Jump"
+            "id": 75611679208549,
+            "name": "[VOTE] Float Jump"
           }
         ],
+        "Run": [
+          {
+            "id": 71267457613791,
+            "name": "[VOTE] Float Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -47,
+      "name": "Default Retarget",
+      "bundledAnimations": {
         "Idle": [
           {
-            "id": 837024662,
-            "name": "Pirate Idle"
+            "id": 95884606664820,
+            "name": "Default Retarget Idle"
           }
         ],
-        "Swim": [
+        "Jump": [
           {
-            "id": 837025054,
-            "name": "Pirate Swim"
+            "id": 117150377950987,
+            "name": "Default Retarget Jump"
           }
         ],
-        "Climb": [
+        "Fall": [
           {
-            "id": 837025325,
-            "name": "Pirate Climb"
+            "id": 110205622518029,
+            "name": "Default Retarget Fall"
+          }
+        ],
+        "Run": [
+          {
+            "id": 102294264237491,
+            "name": "Default Retarget Run"
+          }
+        ],
+        "Walk": [
+          {
+            "id": 115825677624788,
+            "name": "Default Retarget Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -48,
+      "name": "(UGC) Oh Really?",
+      "bundledAnimations": {
+        "Idle": [
+          {
+            "id": 98004748982532,
+            "name": "(UGC) Oh Really? Idle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -49,
+      "name": "reset",
+      "bundledAnimations": {
+        "Jump": [
+          {
+            "id": 0,
+            "name": "reset Jump"
+          }
+        ],
+        "Fall": [
+          {
+            "id": 0,
+            "name": "reset Fall"
+          }
+        ]
+      }
+    },
+    {
+      "id": -50,
+      "name": "[UGC] happy",
+      "bundledAnimations": {
+        "Jump": [
+          {
+            "id": 72388373557525,
+            "name": "[UGC] happy Jump"
+          }
+        ]
+      }
+    },
+    {
+      "id": -51,
+      "name": "r6 run but fall",
+      "bundledAnimations": {
+        "Jump": [
+          {
+            "id": 12518152696,
+            "name": "r6 run but fall Jump"
+          }
+        ]
+      }
+    },
+    {
+      "id": -52,
+      "name": "UGC",
+      "bundledAnimations": {
+        "Jump": [
+          {
+            "id": 91788124131212,
+            "name": "UGC Jump"
+          }
+        ]
+      }
+    },
+    {
+      "id": -53,
+      "name": "Stylized",
+      "bundledAnimations": {
+        "SwimIdle": [
+          {
+            "id": 4708190607,
+            "name": "Stylized SwimIdle"
+          }
+        ]
+      }
+    },
+    {
+      "id": -54,
+      "name": "[VOTE] skydiving",
+      "bundledAnimations": {
+        "Fall": [
+          {
+            "id": 102674302534126,
+            "name": "[VOTE] skydiving Fall"
+          }
+        ]
+      }
+    },
+    {
+      "id": -55,
+      "name": "[UGC] skydiving",
+      "bundledAnimations": {
+        "Fall": [
+          {
+            "id": 102674302534126,
+            "name": "[UGC] skydiving Fall"
+          }
+        ]
+      }
+    },
+    {
+      "id": -56,
+      "name": "[VOTE] TPose",
+      "bundledAnimations": {
+        "Fall": [
+          {
+            "id": 139027266704971,
+            "name": "[VOTE] TPose Fall"
+          }
+        ]
+      }
+    },
+    {
+      "id": -57,
+      "name": "R15Dance2B",
+      "bundledAnimations": {
+        "Fall": [
+          {
+            "id": 507776720,
+            "name": "R15Dance2B Fall"
+          }
+        ]
+      }
+    },
+    {
+      "id": -58,
+      "name": "r6 run but jump",
+      "bundledAnimations": {
+        "Fall": [
+          {
+            "id": 12518152696,
+            "name": "r6 run but jump Fall"
+          }
+        ]
+      }
+    },
+    {
+      "id": -59,
+      "name": "[UGC] Naruto",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 104074120169874,
+            "name": "[UGC] Naruto Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -60,
+      "name": "Heavy Run (Udzal / Borock)",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 3236836670,
+            "name": "Heavy Run (Udzal / Borock) Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -61,
+      "name": "Runaway",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 78510387198062,
+            "name": "Runaway Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -62,
+      "name": "[UGC] ball",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 132499588684957,
+            "name": "[UGC] ball Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -63,
+      "name": "[UGC] reset",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 0,
+            "name": "[UGC] reset Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -64,
+      "name": "[UGC] DCEA Flash",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 107994680200921,
+            "name": "[UGC] DCEA Flash Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -65,
+      "name": "[UGC] Flipping",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 124427738251511,
+            "name": "[UGC] Flipping Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -66,
+      "name": "(UGC) Dog",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 130072963359721,
+            "name": "(UGC) Dog Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -67,
+      "name": "fake wicked",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 138992096476836,
+            "name": "fake wicked Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -68,
+      "name": "furry",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 102269417125238,
+            "name": "furry Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -69,
+      "name": "[UGC] chibi",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 85887415033585,
+            "name": "[UGC] chibi Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -70,
+      "name": "bunnyhop",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 109161394574390,
+            "name": "bunnyhop Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -71,
+      "name": "[UGC] Girly",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 128578785610052,
+            "name": "[UGC] Girly Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -72,
+      "name": "(UGC) Soccer",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 116881956670910,
+            "name": "(UGC) Soccer Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -73,
+      "name": "(UGC) Pride",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 116462200642360,
+            "name": "(UGC) Pride Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -74,
+      "name": "bhop",
+      "bundledAnimations": {
+        "Run": [
+          {
+            "id": 120051666454351,
+            "name": "bhop Run"
+          }
+        ]
+      }
+    },
+    {
+      "id": -75,
+      "name": "Geto",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 85811471336028,
+            "name": "Geto Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -76,
+      "name": "1x4",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 138379855143069,
+            "name": "1x4 Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -77,
+      "name": "[UGC] Cool",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 128995932870454,
+            "name": "[UGC] Cool Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -78,
+      "name": "Gojo",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 95643163365384,
+            "name": "Gojo Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -79,
+      "name": "(UGC) Smooth",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 76630051272791,
+            "name": "(UGC) Smooth Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -80,
+      "name": "cool i think",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 125496855068182,
+            "name": "cool i think Walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": -81,
+      "name": "c00lkid",
+      "bundledAnimations": {
+        "Walk": [
+          {
+            "id": 93206157668596,
+            "name": "c00lkid Walk"
           }
         ]
       }
     }
+  ]
+}

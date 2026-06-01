@@ -7,8 +7,6 @@ const fs = require("fs");
 const GITHUB_SOURCES = {
     "AnimationSniper.json":
         "https://raw.githubusercontent.com/PinkWards/emote-sniper/main/AnimationSniper.json"
-    // Add more files here if needed, e.g.:
-    // "EmoteSniper.json": "https://raw.githubusercontent.com/..."
 };
 
 const APIs = [
@@ -32,9 +30,28 @@ const APIs = [
     }
 ];
 
+// ============================================================
+// Known animation type names for extraction from bundled items
+// ============================================================
+const ANIM_TYPES = ["Climb", "Fall", "Walk", "Swim", "SwimIdle", "Idle", "Run", "Jump"];
+
 function log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
+}
+
+// ============================================================
+// Extract animation type from a name string
+// ============================================================
+function extractAnimType(name) {
+    if (!name || typeof name !== "string") return null;
+    const lower = name.toLowerCase();
+    for (const t of ANIM_TYPES) {
+        if (lower.includes(t.toLowerCase())) {
+            return t;
+        }
+    }
+    return null;
 }
 
 // ============================================================
@@ -49,7 +66,48 @@ function isValidItem(item) {
 }
 
 // ============================================================
-// Validate and clean an item — strips invalid fields
+// Validate a single animation entry {id, name}
+// ============================================================
+function isValidAnimEntry(entry) {
+    if (!entry || typeof entry !== "object") return false;
+    if (entry.id === undefined || entry.id === null) return false;
+    if (typeof entry.id !== "number" || isNaN(entry.id)) return false;
+    if (!entry.name || typeof entry.name !== "string" || entry.name.trim() === "") return false;
+    return true;
+}
+
+// ============================================================
+// Validate and clean bundledAnimations
+// ============================================================
+function cleanBundledAnimations(bundledAnimations) {
+    if (!bundledAnimations || typeof bundledAnimations !== "object" || Array.isArray(bundledAnimations)) {
+        return null;
+    }
+
+    const cleaned = {};
+    let hasValid = false;
+
+    for (const [typeKey, entries] of Object.entries(bundledAnimations)) {
+        if (!Array.isArray(entries)) continue;
+
+        const validEntries = entries
+            .filter(e => isValidAnimEntry(e))
+            .map(e => ({
+                id: e.id,
+                name: e.name.trim()
+            }));
+
+        if (validEntries.length > 0) {
+            cleaned[typeKey] = validEntries;
+            hasValid = true;
+        }
+    }
+
+    return hasValid ? cleaned : null;
+}
+
+// ============================================================
+// Validate and clean an entire item
 // ============================================================
 function cleanItem(item) {
     const cleaned = {
@@ -57,17 +115,9 @@ function cleanItem(item) {
         name: item.name.trim()
     };
 
-    // Preserve bundledItems if present and valid
-    if (item.bundledItems && typeof item.bundledItems === "object" && !Array.isArray(item.bundledItems)) {
-        const validBundled = {};
-        for (const [key, values] of Object.entries(item.bundledItems)) {
-            if (Array.isArray(values) && values.every(v => typeof v === "number")) {
-                validBundled[key] = values;
-            }
-        }
-        if (Object.keys(validBundled).length > 0) {
-            cleaned.bundledItems = validBundled;
-        }
+    const anims = cleanBundledAnimations(item.bundledAnimations);
+    if (anims) {
+        cleaned.bundledAnimations = anims;
     }
 
     return cleaned;
@@ -79,7 +129,6 @@ function loadExistingData(filename) {
             const data = JSON.parse(fs.readFileSync(filename, "utf8"));
             const rawItems = data.data || [];
 
-            // Validate every item — only keep valid ones
             const existingItems = [];
             const existingIds = new Set();
 
@@ -214,6 +263,44 @@ async function fetchData(baseUrl, cursor = "", maxRetries = 3) {
     }
 }
 
+// ============================================================
+// Convert API bundledItems to bundledAnimations format
+// ============================================================
+function convertBundledItemsToAnimations(bundledItems, parentName) {
+    if (!bundledItems || !Array.isArray(bundledItems)) return null;
+
+    const animations = {};
+
+    for (const bundledItem of bundledItems) {
+        if (bundledItem.type === "UserOutfit") continue;
+        if (!bundledItem.id) continue;
+
+        const animName = bundledItem.name || parentName || "";
+        const animType = extractAnimType(animName);
+
+        if (animType) {
+            if (!animations[animType]) {
+                animations[animType] = [];
+            }
+            animations[animType].push({
+                id: bundledItem.id,
+                name: animName.trim()
+            });
+        } else {
+            const genericKey = `Animation_${Object.keys(animations).length + 1}`;
+            if (!animations[genericKey]) {
+                animations[genericKey] = [];
+            }
+            animations[genericKey].push({
+                id: bundledItem.id,
+                name: animName.trim()
+            });
+        }
+    }
+
+    return Object.keys(animations).length > 0 ? animations : null;
+}
+
 async function fetchFromAPI(apiInfo, existingData) {
     const apiItems = [];
     let nextPageCursor = null;
@@ -239,28 +326,15 @@ async function fetchFromAPI(apiInfo, existingData) {
                         };
 
                         if (item.bundledItems && Array.isArray(item.bundledItems)) {
-                            const bundledAssets = {};
-                            let animCounter = 1;
-
-                            item.bundledItems.forEach((bundledItem) => {
-                                if (bundledItem.type === "UserOutfit") return;
-
-                                const typeKey = animCounter++.toString();
-
-                                if (bundledItem.id) {
-                                    if (!bundledAssets[typeKey]) {
-                                        bundledAssets[typeKey] = [];
-                                    }
-                                    bundledAssets[typeKey].push(bundledItem.id);
-                                }
-                            });
-
-                            if (Object.keys(bundledAssets).length > 0) {
-                                itemData.bundledItems = bundledAssets;
+                            const animations = convertBundledItemsToAnimations(
+                                item.bundledItems,
+                                item.name
+                            );
+                            if (animations) {
+                                itemData.bundledAnimations = animations;
                             }
                         }
 
-                        // Validate before adding
                         if (isValidItem(itemData)) {
                             apiItems.push(itemData);
                             existingData.ids.add(item.id);
@@ -320,17 +394,12 @@ async function processAPIsByFile() {
     for (const [filename, apis] of Object.entries(apisByFile)) {
         log(`Processing ${filename}...`);
 
-        // Step 1: Fetch GitHub baseline data (these items are PERMANENT)
         const githubData = await fetchGitHubData(filename);
-
-        // Step 2: Load local file data
         const localData = loadExistingData(filename);
 
-        // Step 3: Merge — GitHub items take priority, then local items
         const mergedItems = [];
         const mergedIds = new Set();
 
-        // Add GitHub items first (highest priority — never removed)
         for (const item of githubData.items) {
             if (!mergedIds.has(item.id)) {
                 mergedItems.push(item);
@@ -338,7 +407,6 @@ async function processAPIsByFile() {
             }
         }
 
-        // Add local items not already in GitHub
         for (const item of localData.items) {
             if (!mergedIds.has(item.id)) {
                 mergedItems.push(item);
@@ -348,10 +416,8 @@ async function processAPIsByFile() {
 
         log(`[MERGE] ${filename}: ${githubData.items.length} from GitHub + ${localData.items.length} from local = ${mergedItems.length} merged`);
 
-        // Step 4: Build existingData for API dedup check
         const existingData = { items: mergedItems, ids: mergedIds };
 
-        // Step 5: Fetch from APIs — only adds NEW items
         let totalNewItems = 0;
         let totalDuplicates = 0;
 
@@ -364,7 +430,6 @@ async function processAPIsByFile() {
             log(`${api.name} - New: ${result.newItems}, Duplicates: ${result.duplicates}`);
         }
 
-        // Step 6: Save — ALL items are preserved (GitHub + local + new API)
         const saveSuccess = saveData(mergedItems, filename);
 
         results[filename] = {

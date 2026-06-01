@@ -1,25 +1,6 @@
 const https = require("https");
 const fs = require("fs");
 
-const ANIMATION_ASSET_TYPES = new Set([
-    24,  // Animation
-    48,  // Climb
-    50,  // Fall
-    51,  // Idle
-    52,  // Jump
-    53,  // Run
-    54,  // Swim
-    55   // Walk
-]);
-
-// Generic animations shared by every default Rthro/Base Body character
-const GENERIC_ANIMATION_IDS = new Set([
-    2510230574, 2510235063, 2510233257, 2510236649,
-    2510238627, 2510240941, 2510242378,          // Rthro
-    11600317961, 11600319649, 11600321661, 11600324801,
-    11600327265, 11600329588, 11600331426         // Base Body
-]);
-
 const APIs = [
     {
         name: "Basic API",
@@ -38,14 +19,6 @@ const APIs = [
         baseUrl:
             "https://catalog.roproxy.com/v1/search/items/details?Category=12&Subcategory=38&salesTypeFilter=1&Limit=30",
         outputFile: "AnimationSniper.json"
-    },
-    {
-        name: "Character Bundle Animations API",
-        baseUrl:
-            "https://catalog.roproxy.com/v1/search/items/details?ItemType=Bundle&salesTypeFilter=1&Limit=30",
-        outputFile: "AnimationSniper.json",
-        extractAnimations: true,
-        maxPages: 15
     }
 ];
 
@@ -122,9 +95,6 @@ async function fetchFromAPI(apiInfo, existingData) {
     let pageCount = 0;
     let newItemsCount = 0;
     let duplicateCount = 0;
-    let skippedNonBundle = 0;
-    let skippedGeneric = 0;
-    const maxPages = apiInfo.maxPages || Infinity;
 
     try {
         do {
@@ -137,50 +107,6 @@ async function fetchFromAPI(apiInfo, existingData) {
                 response.data.forEach((item) => {
                     if (existingData.ids.has(item.id)) {
                         duplicateCount++;
-                        return;
-                    }
-
-                    if (apiInfo.extractAnimations) {
-                        if (item.itemType !== "Bundle") {
-                            skippedNonBundle++;
-                            return;
-                        }
-
-                        const bundledItems = item.bundledItems || [];
-                        
-                        // Filter for animations BUT exclude generic ones
-                        const uniqueAnimations = bundledItems.filter((bi) => {
-                            if (bi.type === "UserOutfit") return false;
-                            if (!ANIMATION_ASSET_TYPES.has(bi.assetType)) return false;
-                            if (GENERIC_ANIMATION_IDS.has(bi.id)) return false;
-                            if (bi.name && (bi.name.startsWith("Rthro ") || bi.name.startsWith("Base Body "))) return false;
-                            return true;
-                        });
-
-                        // Skip bundles that have no unique animations
-                        if (uniqueAnimations.length === 0) {
-                            skippedGeneric++;
-                            return;
-                        }
-
-                        const bundledAssets = {};
-                        let counter = 1;
-
-                        uniqueAnimations.forEach((anim) => {
-                            const key = (counter++).toString();
-                            bundledAssets[key] = [anim.id];
-                        });
-
-                        apiItems.push({
-                            id: item.id,
-                            name: item.name,
-                            bundledItems: bundledAssets
-                        });
-
-                        existingData.ids.add(item.id);
-                        newItemsCount++;
-
-                        log(`${apiInfo.name} - ✓ "${item.name}" → ${uniqueAnimations.length} unique animations`);
                     } else {
                         const itemData = {
                             id: item.id,
@@ -218,13 +144,9 @@ async function fetchFromAPI(apiInfo, existingData) {
 
             nextPageCursor = response.nextPageCursor;
             await new Promise((resolve) => setTimeout(resolve, 1000));
-        } while (nextPageCursor && nextPageCursor.trim() !== "" && pageCount < maxPages);
+        } while (nextPageCursor && nextPageCursor.trim() !== "");
     } catch (error) {
         log(`Error in ${apiInfo.name}: ${error.message}`);
-    }
-
-    if (apiInfo.extractAnimations) {
-        log(`${apiInfo.name} - Skipped: ${skippedNonBundle} non-bundles, ${skippedGeneric} generic-only bundles`);
     }
 
     return {
@@ -301,7 +223,7 @@ async function processAPIsByFile() {
 }
 
 async function main() {
-    log("Starting Enhanced EmoteSniper with Unique Bundle Animation support...");
+    log("Starting Enhanced EmoteSniper with Animation support...");
 
     try {
         const { results, duration } = await processAPIsByFile();

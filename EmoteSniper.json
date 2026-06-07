@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 49189,
-  "lastUpdate": "2026-06-07T20:59:38.066Z",
+  "totalItems": 49191,
+  "lastUpdate": "2026-06-07T22:02:09.210Z",
   "data": [
     {
       "id": 3360689775,
@@ -196758,6 +196758,14 @@
     {
       "id": 101854949802756,
       "name": "Head Pat Hair Head Scratches"
+    },
+    {
+      "id": 88363647483612,
+      "name": "Spice MainCharacter"
+    },
+    {
+      "id": 94892483748973,
+      "name": "Spice TempoSwitch"
     }
   ]
 }

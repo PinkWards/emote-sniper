@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 52965,
-  "lastUpdate": "2026-07-13T23:42:04.931Z",
+  "totalItems": 52967,
+  "lastUpdate": "2026-07-14T01:17:34.424Z",
   "data": [
     {
       "id": 3360689775,
@@ -211862,6 +211862,14 @@
     {
       "id": 133381385253252,
       "name": "Awakened Honored Float"
+    },
+    {
+      "id": 90986105422668,
+      "name": "adorable doll emote ♡"
+    },
+    {
+      "id": 77507464990191,
+      "name": "cat sit emote"
     }
   ]
 }

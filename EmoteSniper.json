@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 54006,
-  "lastUpdate": "2026-07-24T04:59:08.730Z",
+  "totalItems": 54010,
+  "lastUpdate": "2026-07-24T07:29:04.463Z",
   "data": [
     {
       "id": 3360689775,
@@ -216026,6 +216026,22 @@
     {
       "id": 86630366127324,
       "name": "I LIKE [OG]"
+    },
+    {
+      "id": 136749275953953,
+      "name": "Ei Moto Táxi Cowboy 🔥"
+    },
+    {
+      "id": 125243403703580,
+      "name": "Head Obby Emote"
+    },
+    {
+      "id": 136833562228291,
+      "name": "Heavy Sword Stance Idle Emote"
+    },
+    {
+      "id": 131383560263221,
+      "name": "BIG BAD WOLF EMOTE"
     }
   ]
 }

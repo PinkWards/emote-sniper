@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 56246,
-  "lastUpdate": "2026-08-11T17:47:10.543Z",
+  "totalItems": 56253,
+  "lastUpdate": "2026-08-11T18:43:41.433Z",
   "data": [
     {
       "id": 3360689775,
@@ -224986,6 +224986,34 @@
     {
       "id": 100569299277240,
       "name": "Wall Lean Aura pose (tuff minion)"
+    },
+    {
+      "id": 98206500742922,
+      "name": "Breaking Down / Distress / Sadness / Stressed"
+    },
+    {
+      "id": 105347723183058,
+      "name": "💔 Sad Kitten Sit"
+    },
+    {
+      "id": 134706104116625,
+      "name": "Sad Emote 😞"
+    },
+    {
+      "id": 119384236774468,
+      "name": "🖤 Emo Sad Sit 🥺😞"
+    },
+    {
+      "id": 116544044769423,
+      "name": "Sad Sit (╥﹏╥)"
+    },
+    {
+      "id": 112058728926622,
+      "name": "Sad / Depressed"
+    },
+    {
+      "id": 78950533638538,
+      "name": "Admin Troll Fly"
     }
   ]
 }

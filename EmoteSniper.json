@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 56323,
-  "lastUpdate": "2026-08-12T09:59:56.893Z",
+  "totalItems": 56326,
+  "lastUpdate": "2026-08-12T10:58:56.458Z",
   "data": [
     {
       "id": 3360689775,
@@ -225294,6 +225294,18 @@
     {
       "id": 71407334130276,
       "name": "scuba"
+    },
+    {
+      "id": 74941152478449,
+      "name": "[OG] Dai Dai Dai Kirai Emote"
+    },
+    {
+      "id": 109313987573956,
+      "name": "Dai Dai Dai Kirai"
+    },
+    {
+      "id": 123174457742254,
+      "name": "Alter Ego"
     }
   ]
 }

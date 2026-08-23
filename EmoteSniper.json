@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 57660,
-  "lastUpdate": "2026-08-23T18:13:30.431Z",
+  "totalItems": 57662,
+  "lastUpdate": "2026-08-23T19:14:48.211Z",
   "data": [
     {
       "id": 3360689775,
@@ -230642,6 +230642,14 @@
     {
       "id": 111576331810138,
       "name": "⏳[LIMITED] Headless Aura Float [Vibe, Chill]"
+    },
+    {
+      "id": 114029878123643,
+      "name": "Take the L Emote"
+    },
+    {
+      "id": 135438920202496,
+      "name": "AURA BATTLE JUMP"
     }
   ]
 }

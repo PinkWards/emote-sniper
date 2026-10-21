@@ -1,7 +1,7 @@
 {
   "keyword": null,
-  "totalItems": 64382,
-  "lastUpdate": "2026-10-21T00:23:47.821Z",
+  "totalItems": 64384,
+  "lastUpdate": "2026-10-21T05:30:16.483Z",
   "data": [
     {
       "id": 3360689775,
@@ -257530,6 +257530,14 @@
     {
       "id": 83260572497153,
       "name": "Floating Aura Emote"
+    },
+    {
+      "id": 107134569278226,
+      "name": "Cute Pose For Sanrio Characters"
+    },
+    {
+      "id": 113408049386237,
+      "name": "selebrasi aneh 😹"
     }
   ]
 }
